@@ -1,10 +1,19 @@
 ---
 layout: default
-title: Arthur
+title: Arthur Gonigberg
 ---
 
 {% for post in site.posts limit:5 %}
-<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-{{ post.content }}
-<em>Posted on {{ post.date | date_to_long_string }}.</em>
+			<div class="box">
+				<h3>{{post.title}}</h3><span class="number">00{{ forloop.index }}</span>
+				<div class="clearfix"></div>
+				<div class="sidenote left small">
+					<p class="o">{{post.description}}</p>
+				</div>
+				<div class="right big">
+            {{ post.content }}
+
+					<p><a href="#">Read More...</a></p>
+				</div>
+			</div>
 {% endfor %}
