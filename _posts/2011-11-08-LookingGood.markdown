@@ -4,4 +4,4 @@ title: Looking Good
 description: It's gorgeous!
 ---
 
-What a beautiful **site**...
+What a beautiful **site**... huge improvement.
