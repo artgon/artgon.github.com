@@ -69,8 +69,8 @@ blockquote, q {
 
 body {
 	font-family:Arial, Verdana, sans-serif;
-	color:#fff;
-	background:#474747 url(../images/nav-bg.png) top left repeat-x
+	color:#383838;
+	background:#f2f1ec url(../images/nav-bg.png) top left repeat-x
 }
 
 h1 {font-size:50px;letter-spacing:-10px}
@@ -99,12 +99,12 @@ h4 {float:left;margin:0 0 20px 0;font-size:20px;}
 p {font-size:16px;line-height:24px;margin-bottom:24px;float:left;}
 
 em {font-style:italic;border-bottom:1px dashed;}
-strong {font-weight:bold;color:#ff9000;text-transform:uppercase;}
+strong {font-weight:bold;color:#FF2B06;text-transform:uppercase;}
 
-a {color:#fff;border-bottom:1px solid;}
-a:hover {color:#ff9000;}
+a {color:#383838;border-bottom:1px solid;}
+a:hover {color:#FF2B06;}
 
-.o {color:#ff9000}
+.o {color:#FF2B06}
 
 .number {
 	float:right;
@@ -121,7 +121,9 @@ a:hover {color:#ff9000;}
 
 #arthurHeader {
   float:right; 
-  margin:45px -65px 0 0
+  margin:45px 0 0 0;
+  width:auto;
+  height:auto;
 }
 
 /*--- Layout ---*/
@@ -129,7 +131,6 @@ a:hover {color:#ff9000;}
 #wrapper {
 	width:960px; 
 	margin:0 auto; 
-	background:url(../images/radial-bg.png) top left no-repeat;
   height: 375px;
 }
 
@@ -146,14 +147,25 @@ a:hover {color:#ff9000;}
 	z-index:50;
 }
 
-#nav li {float:left;margin:7px 37px 0 0;}
-#nav li a {text-decoration:none;padding:3px 10px;border:none;}
+#nav li {
+  float:left;
+  margin:7px 37px 0 0;
+}
+#nav li a {
+  color:#f2f1ec;
+  text-decoration:none;
+  padding:3px 10px;
+  border:none;
+}
+#nav li a:hover {
+  color:#FF2B06;
+}
 #nav li#first a {padding-left:0}
 
 
 /*--- Header ---*/
 
-#header {height:175px}
+#header {height:137px}
 #logo {float:left;margin:65px 0 0 0}
 
 
@@ -182,6 +194,7 @@ a:hover {color:#ff9000;}
 
 #footer {
 	float:left;
+  color:#f2f1ec;
 	width:100%;
 	height:355px;
 	margin:50px 0 0 0;
@@ -200,5 +213,14 @@ a:hover {color:#ff9000;}
 #social li a {text-decoration:none;padding:3px 10px;border:none}
 #social img {width:32px;height:32px}
 
-.credits {margin:35px 0 0 0;font-size:13px}
-.credits a {text-decoration:none;}
+.credits {
+  margin:35px 0 0 0;
+  font-size:13px
+}
+.credits a {
+  color:#f2f1ec;
+  text-decoration:none;
+}
+.credits a:hover {
+  color:#FF2B06;
+}
