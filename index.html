@@ -11,9 +11,9 @@ title: Arthur Gonigberg
 					<p class="o">{{post.description}}</p>
 				</div>
 				<div class="right big">
-            {{ post.content }}
+            {{ post.teaser | markdownify }}
 
-					<p><a href="#">Read More...</a></p>
+					<p><a href="{{post.url}}">Read More...</a></p>
 				</div>
 			</div>
 {% endfor %}

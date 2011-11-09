@@ -112,6 +112,7 @@ a:hover {color:#ff9000;}
 	font-family:Times, Georgia, Serif;
 	font-size:30px;
 	line-height:30px;
+  display:none;
 }
 
 #navnumber {
