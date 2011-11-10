@@ -67,8 +67,51 @@ blockquote, q {
 
 /*--- Common ---*/
 
+@font-face {
+    font-family: 'GentiumBookBasicRegular';
+    src: url('/fonts/GenBkBasR-webfont.eot');
+    src: url('/fonts/GenBkBasR-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/GenBkBasR-webfont.woff') format('woff'),
+         url('/fonts/GenBkBasR-webfont.ttf') format('truetype'),
+         url('/fonts/GenBkBasR-webfont.svg#GentiumBookBasicRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CartoGothicStdBook';
+    src: url('/fonts/CartoGothicStd-Book-webfont.eot');
+    src: url('/fonts/CartoGothicStd-Book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/CartoGothicStd-Book-webfont.woff') format('woff'),
+         url('/fonts/CartoGothicStd-Book-webfont.ttf') format('truetype'),
+         url('/fonts/CartoGothicStd-Book-webfont.svg#CartoGothicStdBook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PTSansRegular';
+    src: url('/fonts/PTS55F-webfont.eot');
+    src: url('/fonts/PTS55F-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/PTS55F-webfont.woff') format('woff'),
+         url('/fonts/PTS55F-webfont.ttf') format('truetype'),
+         url('/fonts/PTS55F-webfont.svg#PTSansRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* apply fonts selectively - the logo is a specific font and the headings are serif */
+#arthurHeader {
+	font-family:CartoGothicStdBook, Helvetica, Arial, Verdana, sans-serif;
+}
+
+h3 {
+	font-family:GentiumBookBasicRegular, Georgia, Serif;
+}
+
 body {
-	font-family:Arial, Verdana, sans-serif;
+	font-family:PTSansRegular, Helvetica, Arial, Verdana, sans-serif;
 	color:#383838;
 	background:#f2f1ec url(../images/nav-bg.png) top left repeat-x
 }
@@ -87,7 +130,6 @@ h2 {
 h3 {
 	float:left;
 	margin:0 0 30px 0;
-	font-family:Times, Georgia, Serif;
 	font-weight:normal;
 	font-size:30px;
 	line-height:30px;
@@ -96,12 +138,18 @@ h3 {
 
 h4 {float:left;margin:0 0 20px 0;font-size:20px;}
 
-p {font-size:16px;line-height:24px;margin-bottom:24px;float:left;}
+p {
+  font-size:16px;
+  word-spacing: 0.15em;
+  line-height:24px;
+  margin-bottom:24px;
+  float:left;
+}
 
 em {font-style:italic;border-bottom:1px dashed;}
 strong {font-weight:bold;color:#FF2B06;text-transform:uppercase;}
 
-a {color:#383838;border-bottom:1px solid;}
+a {color:#383838;border-bottom:1px solid;text-decoration:none;}
 a:hover {color:#FF2B06;}
 
 .o {color:#FF2B06}
@@ -142,7 +190,6 @@ a:hover {color:#FF2B06;}
 	margin:0;
 	padding:0 0 0 0;
 	font-size:20px;
-	letter-spacing:-1px;
 	position:relative;
 	z-index:50;
 }
@@ -203,6 +250,7 @@ a:hover {color:#FF2B06;}
 .inner {width:960px;margin:0 auto;padding:40px 0 0 0;}
 #footer img, #footer p {margin:0 53px 10px 0; width:200px;float:left}
 #footer .about {height: 245px; overflow: hidden}
+#footer .about p {width:235px;}
 
 #socialWrapper {
   width:32px;
