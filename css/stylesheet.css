@@ -103,15 +103,15 @@ blockquote, q {
 
 /* apply fonts selectively - the logo is a specific font and the headings are serif */
 #arthurHeader {
-	font-family:CartoGothicStdBook, Helvetica, Arial, Verdana, sans-serif;
+	font-family: CartoGothicStdBook, Helvetica, Arial, Verdana, sans-serif;
 }
 
 h3 {
-	font-family:GentiumBookBasicRegular, Georgia, Serif;
+	font-family: GentiumBookBasicRegular, Georgia, Serif;
 }
 
 body {
-	font-family:PTSansRegular, Helvetica, Arial, Verdana, sans-serif;
+	font-family: PTSansRegular, Helvetica, Arial, Verdana, sans-serif;
 	color:#383838;
 	background:#f2f1ec url(../images/nav-bg.png) top left repeat-x
 }
@@ -153,19 +153,6 @@ a {color:#383838;border-bottom:1px solid;text-decoration:none;}
 a:hover {color:#FF2B06;}
 
 .o {color:#FF2B06}
-
-.number {
-	float:right;
-	color:#fff;
-	font-family:Times, Georgia, Serif;
-	font-size:30px;
-	line-height:30px;
-  display:none;
-}
-
-#navnumber {
-  margin-top: 3px;
-}
 
 #arthurHeader {
   float:right; 
@@ -213,8 +200,6 @@ a:hover {color:#FF2B06;}
 /*--- Header ---*/
 
 #header {height:137px}
-#logo {float:left;margin:65px 0 0 0}
-
 
 /*--- Content ---*/
 
@@ -225,8 +210,8 @@ a:hover {color:#FF2B06;}
 	padding:10px 0 0 0;
 	background:url(../images/box-bg.png) top left repeat-x
 }
-.small, .small p  {width:300px;}
-.big, .big p  {width:630px;}
+.small, .small p  {width:253px;}
+.big, .big p  {width:677px;}
 
 .sidenote p {
 	text-align:right;
@@ -272,3 +257,5 @@ a:hover {color:#FF2B06;}
 .credits a:hover {
   color:#FF2B06;
 }
+
+
