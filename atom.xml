@@ -6,10 +6,10 @@ layout: nil
 <feed xmlns="http://www.w3.org/2005/Atom">
  
   <title>Arthur Gonigberg</title>
-  <link href="http://arthur.gonigberg.com/"/>
-  <link type="application/atom+xml" rel="self" href="http://arthur.gonigberg.com/atom.xml"/>
+  <link href="{{ site.url }}"/>
+  <link type="application/atom+xml" rel="self" href="{{ site.url }}/atom.xml"/>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
-  <id>http://arthur.gonigberg.com</id>
+  <id>{{ site.url }}</id>
   <author>
     <name>Arthur Gonigberg</name>
     <email>arthur@gonigberg.com</email>
