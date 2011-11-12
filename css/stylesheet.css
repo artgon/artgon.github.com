@@ -148,7 +148,7 @@ h3 {
 
 h4 {float:left;margin:0 0 20px 0;font-size:20px;}
 
-p {
+p, ul, blockquote {
   font-size:16px;
   word-spacing: 0.15em;
   line-height:24px;
@@ -157,7 +157,7 @@ p {
 }
 
 em {font-style:italic;border-bottom:1px dashed;}
-strong {font-weight:bold;color:#FF2B06;text-transform:uppercase;}
+strong {font-weight:bold;color:#FF2B06;}
 
 a {color:#383838;border-bottom:1px solid;text-decoration:none;}
 a:hover {color:#FF2B06;}
@@ -222,6 +222,16 @@ a:hover {color:#FF2B06;}
 }
 .small, .small p  {width:0px;}
 .big, .big p  {width:960px;}
+.big ul {
+  list-style: circle;
+  margin: 0 0 1em 2em;  
+}
+.big blockquote {
+  border-left: 1px solid #383838;
+  padding: 0 1em 0 1em;
+  margin: 0 0 1em 1em;
+  font-style: italic;
+}
 
 .sidenote p {
 	text-align:right;
