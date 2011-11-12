@@ -8,7 +8,7 @@ title: Arthur Gonigberg
 				<h3>{{post.title}}</h3>
         <div class="clearfix"></div>
 				<div class="right big">
-            {{ post.content | preview }}
+            {{ post.content | split: '<!--more-->' | first }}
 
 					<p><a href="{{post.url}}">Read this entry...</a></p>
 				</div>
