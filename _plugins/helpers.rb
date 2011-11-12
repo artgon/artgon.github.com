@@ -1,4 +1,4 @@
-module Liquid
+module Jekyll
   
   module ExtendedFilters
 
