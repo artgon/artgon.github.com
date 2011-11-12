@@ -100,6 +100,16 @@ blockquote, q {
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'InconsolataMedium';
+    src: url('/fonts/Inconsolata-webfont.eot');
+    src: url('/fonts/Inconsolata-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/Inconsolata-webfont.woff') format('woff'),
+         url('/fonts/Inconsolata-webfont.ttf') format('truetype'),
+         url('/fonts/Inconsolata-webfont.svg#InconsolataMedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /* apply fonts selectively - the logo is a specific font and the headings are serif */
 #arthurHeader {
@@ -152,7 +162,7 @@ strong {font-weight:bold;color:#FF2B06;text-transform:uppercase;}
 a {color:#383838;border-bottom:1px solid;text-decoration:none;}
 a:hover {color:#FF2B06;}
 
-.o {color:#FF2B06}
+.oranje {color:#FF2B06}
 
 #arthurHeader {
   float:right; 
@@ -210,8 +220,8 @@ a:hover {color:#FF2B06;}
 	padding:10px 0 0 0;
 	background:url(../images/box-bg.png) top left repeat-x
 }
-.small, .small p  {width:253px;}
-.big, .big p  {width:677px;}
+.small, .small p  {width:0px;}
+.big, .big p  {width:960px;}
 
 .sidenote p {
 	text-align:right;

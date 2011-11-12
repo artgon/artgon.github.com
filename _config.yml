@@ -5,3 +5,7 @@ pygments: true
 lsi: false
 url: http://artgon.github.com
 permalink: /:year/:month/:day/:title
+
+markdown: rdiscount
+rdiscount:
+  extensions: []

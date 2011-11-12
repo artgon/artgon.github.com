@@ -7,11 +7,8 @@ title: Arthur Gonigberg
 			<div class="box">
 				<h3>{{post.title}}</h3>
         <div class="clearfix"></div>
-				<div class="sidenote left small">
-					<p class="o">{{post.description}}</p>
-				</div>
 				<div class="right big">
-            {{ post.teaser | markdownify }}
+            {{ post.content | preview }}
 
 					<p><a href="{{post.url}}">Read this entry...</a></p>
 				</div>

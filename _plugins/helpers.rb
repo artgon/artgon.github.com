@@ -25,11 +25,11 @@ module Liquid
       content_length > actual_length ? doc.truncate(actual_length).inner_html + ellipsis : text.to_s
     end
 
-    def preview(text, delimiter = '<!-- end_preview -->')
+    def preview(text, delimiter = '<!--more-->')
       if text.index(delimiter) != nil
         text.split(delimiter)[0]
       else
-        html_truncatewords(text)
+        text
       end
     end
 
