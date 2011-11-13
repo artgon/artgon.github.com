@@ -8,7 +8,16 @@ title: Arthur Gonigberg
 				<h3>{{post.title}}</h3>
         <div class="clearfix"></div>
 				<div class="right big">
-            {{ post.content | split: '<!--more-->' | first }}
+            {% assign breakIndex = -1 %}
+            {% for element in post.content %}
+              {% if element contains '<!--more-->' %}
+                {% assign breakIndex = forloop.index %}
+              {% endif %}
+            {% endfor %}
+
+            {% for element in post.content limit: breakIndex %}
+              {{ element }}
+            {% endfor %}
 
 					<p><a href="{{post.url}}">Read this entry...</a></p>
 				</div>
