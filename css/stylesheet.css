@@ -262,7 +262,10 @@ a:hover {color:#FF2B06;}
   float:right;
 }
 
-#social { list-style:none; }
+#social { 
+  list-style:none; 
+  line-height: 0;
+}
 #social li a {text-decoration:none;padding:3px 10px;border:none}
 #social img {width:32px;height:32px}
 
