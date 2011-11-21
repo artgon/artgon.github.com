@@ -1,59 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-      <loc>/archive/</loc>
+      <loc>http://arthur.gonigberg.com/archive/</loc>
       <lastmod>2011-11-11</lastmod>
   </url>
   <url>
-      <loc>/atom.xml</loc>
+      <loc>http://arthur.gonigberg.com/atom.xml</loc>
       <lastmod>2011-11-10</lastmod>
   </url>
   <url>
-      <loc>/</loc>
+      <loc>http://arthur.gonigberg.com/</loc>
       <lastmod>2011-11-12</lastmod>
   </url>
   <url>
-      <loc>/2011/10/10/wiring-restlet-jax-rs-spring</loc>
+      <loc>http://arthur.gonigberg.com/2011/10/10/wiring-restlet-jax-rs-spring</loc>
       <lastmod>2011-10-10</lastmod>
       <changefreq>never</changefreq>
   </url>
   <url>
-      <loc>/2011/07/18/open-source-contributor</loc>
+      <loc>http://arthur.gonigberg.com/2011/07/18/open-source-contributor</loc>
       <lastmod>2011-07-18</lastmod>
       <changefreq>never</changefreq>
   </url>
   <url>
-      <loc>/2011/03/07/scala-and-codekata</loc>
+      <loc>http://arthur.gonigberg.com/2011/03/07/scala-and-codekata</loc>
       <lastmod>2011-03-07</lastmod>
       <changefreq>never</changefreq>
   </url>
   <url>
-      <loc>/2010/11/13/optimizing-thread-safety-java</loc>
+      <loc>http://arthur.gonigberg.com/2010/11/13/optimizing-thread-safety-java</loc>
       <lastmod>2010-11-13</lastmod>
       <changefreq>never</changefreq>
   </url>
   <url>
-      <loc>/2010/10/18/hiatus-over</loc>
+      <loc>http://arthur.gonigberg.com/2010/10/18/hiatus-over</loc>
       <lastmod>2010-10-18</lastmod>
       <changefreq>never</changefreq>
   </url>
   <url>
-      <loc>/2010/05/07/double-brace-initialization</loc>
+      <loc>http://arthur.gonigberg.com/2010/05/07/double-brace-initialization</loc>
       <lastmod>2010-05-07</lastmod>
       <changefreq>never</changefreq>
   </url>
   <url>
-      <loc>/2010/04/26/jaxb-generating-schema-from-object-model</loc>
+      <loc>http://arthur.gonigberg.com/2010/04/26/jaxb-generating-schema-from-object-model</loc>
       <lastmod>2010-04-26</lastmod>
       <changefreq>never</changefreq>
   </url>
   <url>
-      <loc>/2010/04/21/getting-started-with-jaxb</loc>
+      <loc>http://arthur.gonigberg.com/2010/04/21/getting-started-with-jaxb</loc>
       <lastmod>2010-04-21</lastmod>
       <changefreq>never</changefreq>
   </url>
   <url>
-      <loc>/2010/04/19/welcome-to-the-new-world</loc>
+      <loc>http://arthur.gonigberg.com/2010/04/19/welcome-to-the-new-world</loc>
       <lastmod>2010-04-19</lastmod>
       <changefreq>never</changefreq>
   </url>
