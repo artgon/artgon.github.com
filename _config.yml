@@ -5,6 +5,7 @@ pygments: true
 safe: false
 lsi: false
 url: http://arthur.gonigberg.com
+baseurl: http://arthur.gonigberg.com
 permalink: /:year/:month/:day/:title
 
 markdown: rdiscount
