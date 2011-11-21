@@ -2,7 +2,7 @@ auto: true
 server: true
 server_port: 3000
 pygments: true
-safe: true
+safe: false
 lsi: false
 url: http://arthur.gonigberg.com
 permalink: /:year/:month/:day/:title
