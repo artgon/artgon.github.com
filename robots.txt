@@ -1,4 +1,4 @@
 User-agent: *
-Disallow:
+Allow: /
 
 Sitemap: http://arthur.gonigberg.com/sitemap.xml
