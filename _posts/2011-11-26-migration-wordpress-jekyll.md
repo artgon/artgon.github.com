@@ -1,6 +1,7 @@
 --- 
 layout: post
 title: New Design and Jekyll Migration
+meta-description: Relaunching my site with a new design and a new host. This post details the migration from Wordpress to Jekyll, on Github Pages.
 ---
 
 Welcome to the new iteration of my site. I finally spent some 
