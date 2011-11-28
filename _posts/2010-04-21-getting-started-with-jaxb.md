@@ -2,6 +2,7 @@
 layout: post
 title: Getting Started with JAXB
 published: true
+meta-description: Overview on how to get started with JAXB with some basic annotations
 meta: 
   _edit_last: "2"
 tags: 

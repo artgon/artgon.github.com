@@ -2,6 +2,7 @@
 layout: post
 title: "Fun Facts: Double Brace Initialization"
 published: true
+meta-description: Quick little post about Double Brace initialization and its pros and cons
 meta: 
   _edit_last: "2"
 tags: 

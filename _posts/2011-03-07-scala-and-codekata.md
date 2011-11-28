@@ -2,6 +2,7 @@
 layout: post
 title: Scala and CodeKata
 published: true
+meta-description: Learning Scala by using Code Kata
 meta: 
   _edit_last: "2"
 tags: 

@@ -2,6 +2,7 @@
 layout: post
 title: Optimizing Thread Safety in Java
 published: true
+meta-description: Some tips on how to increase locking performance in Java, using different types of tools.
 meta: 
   _edit_last: "2"
   _aioseop_description: This article discusses various ways to optimize the performance of threaded applications in Java by using java.util.concurrent over the synchronized keyword.

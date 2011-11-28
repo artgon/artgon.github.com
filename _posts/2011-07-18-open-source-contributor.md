@@ -2,6 +2,7 @@
 layout: post
 title: Officially an Open Source Contributor
 published: true
+meta-description: Open source contribution to the JASYPT framework
 meta: 
   _edit_last: "2"
 tags: 

@@ -2,6 +2,7 @@
 layout: post
 title: "JAXB Continued: Generating Schema from Object Model"
 published: true
+meta-description: How to generate a JAXB schema from the object model
 meta: 
   _edit_last: "2"
 tags: 

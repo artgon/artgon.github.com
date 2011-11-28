@@ -2,6 +2,7 @@
 layout: post
 title: Wiring Restlet's JAX-RS with Spring
 published: true
+meta-description: Some details on how to wire Spring and JAX-RS using the Restlet framework.
 meta: 
   _edit_last: "2"
 tags: 
