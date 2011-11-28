@@ -6,11 +6,16 @@
   </url>
   <url>
       <loc>http://arthur.gonigberg.com/atom.xml</loc>
-      <lastmod>2011-11-10</lastmod>
+      <lastmod>2011-11-27</lastmod>
   </url>
   <url>
       <loc>http://arthur.gonigberg.com/</loc>
       <lastmod>2011-11-12</lastmod>
+  </url>
+  <url>
+      <loc>http://arthur.gonigberg.com/2011/11/26/migration-wordpress-jekyll</loc>
+      <lastmod>2011-11-26</lastmod>
+      <changefreq>never</changefreq>
   </url>
   <url>
       <loc>http://arthur.gonigberg.com/2011/10/10/wiring-restlet-jax-rs-spring</loc>
