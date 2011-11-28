@@ -6,7 +6,7 @@ meta-description: Relaunching my site with a new design and a new host. This pos
 
 Welcome to the new iteration of my site. I finally spent some 
 time thinking about and designing the new version of the site. Unlike the previous
-layout, I can honestly say I'm proud of how it looks and I'm excited to write articles on it. The design is inspired by a template form [John O'Nolan](http://john.onolan.org/), but I changed the colors, fonts and most of the flow. Looks, aside,  a lot of the excitement also comes from the migration of the blog to Github Pages, from Wordpress.
+layout, I can honestly say I'm proud of how it looks and I'm excited to write articles on it. The design is inspired by a template from [John O'Nolan](http://john.onolan.org/), but I changed the colors, fonts and most of the flow. Looks, aside,  a lot of the excitement also comes from the migration of the blog to Github Pages, from Wordpress.
 
 Wordpress is a fantastic platform for blogging and has a huge community for support and plugins. As much as I enjoyed the ease of use, I really wanted more control. I wanted a site that's more nicely suited to technical blogging and ideally, one where I don't have to pay for hosting. An option I considered was using Blogger (via Google Apps), but there is a lack of control there, and it's a massive pain to get code highlighting working correctly -- ditto for Tumblr. I also wanted a space where I could host some images, CSS and JS with my site. Luckily the solution that fit all the criteria was [Github Pages](http://pages.github.com "Github Pages").
 
