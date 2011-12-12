@@ -34,7 +34,7 @@ public class SampleWebServicesApplication extends JaxRsApplication
 {
 	private static final Logger LOG = LoggerFactory.getLogger( SampleWebServicesApplication.class );
 
-	public MtsWebServicesApplication( Context context )
+	public SampleWebServicesApplication( Context context )
 	{
 		super( context );
 		this.add( new JaxRsApplicationImpl() );
