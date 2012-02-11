@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
       <loc>http://arthur.gonigberg.com/archive/</loc>
-      <lastmod>2011-11-11</lastmod>
+      <lastmod>2011-11-27</lastmod>
   </url>
   <url>
       <loc>http://arthur.gonigberg.com/atom.xml</loc>
@@ -10,7 +10,12 @@
   </url>
   <url>
       <loc>http://arthur.gonigberg.com/</loc>
-      <lastmod>2011-11-12</lastmod>
+      <lastmod>2011-11-27</lastmod>
+  </url>
+  <url>
+      <loc>http://arthur.gonigberg.com/2012/02/11/camel-rabbitmq</loc>
+      <lastmod>2012-02-11</lastmod>
+      <changefreq>never</changefreq>
   </url>
   <url>
       <loc>http://arthur.gonigberg.com/2011/11/26/migration-wordpress-jekyll</loc>
