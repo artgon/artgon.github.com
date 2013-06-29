@@ -56,6 +56,7 @@ def chop(search: Int, searchSet: List[Int]): Int = {
 }
 {% endhighlight %}
 
+
 It seems pretty standard, no functional programming at all. The next take on the algorithm was to do it in a recursive (slightly more functional) way.
 
 {% highlight scala %}

@@ -4,22 +4,12 @@ title: Arthur Gonigberg
 meta-description: The blog of Arthur Gonigberg, mainly dedicated to Java and technical information.
 ---
 
-{% for post in site.posts limit:5 %}
+{% for post in site.posts limit:2 %}
 			<div class="box">
 				<h3>{{post.title}}</h3>
         <div class="clearfix"></div>
 				<div class="right big">
-            {% assign breakIndex = -1 %}
-            {% for element in post.content %}
-              {% if element contains '<!--more-->' %}
-                {% assign breakIndex = forloop.index %}
-              {% endif %}
-            {% endfor %}
-
-            {% for element in post.content limit: breakIndex %}
-              {{ element }}
-            {% endfor %}
-
+          {{ post.excerpt }}
 					<p><a href="{{post.url}}">Read this entry...</a></p>
 				</div>
 			</div>

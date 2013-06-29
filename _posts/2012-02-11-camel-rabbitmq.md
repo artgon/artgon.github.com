@@ -1,4 +1,3 @@
-
 --- 
 layout: post
 title: Camel and RabbitMQ
