@@ -133,9 +133,93 @@ be _401_ then we send the user back to the login page.
 
 #### Mixing in UI-Router
 
-asdf
+One of the more useful plugins for angular is [ui-router](https://github.com/angular-ui/ui-router "UI Router"). 
+This plugin allows you to create more powerful constructs with your
+states by using inheritance and substate transitions. Using _ui-router_,
+our route definition would as follows:
 
+{% highlight javascript %}
+angular.module('yourApp').config(function ($stateProvider, $urlRouterProvider) {
+
+  $urlRouterProvider.otherwise('/');
+
+  $stateProvider
+    .state('login', {
+      url: '/login',
+      templateUrl: 'login.html',
+      controller: 'LoginController'
+      resolve: {
+        //...
+      }
+    })
+
+    .state('app', {
+      url: '/app', 
+      templateUrl: 'app.html',
+      controller: 'AppController'
+      resolve: {
+        //...
+      }
+  });
+});
+{% endhighlight %}
+
+Similarly, we'll need to make some minor changes to the authentication
+watch function -- from watching route change, to state change.
+
+{% highlight javascript %}
+angular.module('yourApp').run(function ($rootScope, $location, AuthenticationService, SessionService) {
+
+  // enumerate routes that don't need authentication
+  var routesThatDontRequireAuth = ['/login'];
+
+  // check if current location matches route  
+  var routeClean = function (route) {
+    return _.find(routesThatDontRequireAuth,
+      function (noAuthRoute) {
+        return _.str.startsWith(route, noAuthRoute);
+      });
+  };
+
+  $rootScope.$on('$stateChangeStart', function (ev, to, toParams, from, fromParams) {
+    // if route requires auth and user is not logged in
+    if (!routeClean($location.url()) && !AuthenticationService.isLoggedIn()) {
+      // redirect back to login
+      $location.path('/login');
+    }
+  });
+});
+{% endhighlight %}
+
+Fortunately, we don't have to change the 401 intercepter and everything
+works just as before.
 
 #### Expanding into Role-Based Authentication
 
-asdf
+The last step that you may want to take is role-based authentication.
+This is starting to add a bit more complexity to your app, and may not
+be necessary on the JS side. However, if you do need it, it's a critical
+component.
+
+The way to approach this would be have some sort of user object with
+roles, ideally specified in an injectable service:
+
+{% highlight javascript %}
+// todo user service
+{% endhighlight %}
+ 
+Then inject this _UserService_ into the authentication watcher for
+further authorization, after the authentication step. Or, probably more
+ideally, you would want to create an _AuthorizationService_. It would
+look something like this:
+
+{% highlight javascript %}
+// todo revamped watch
+{% endhighlight %}
+ 
+Hope you found this tutorial useful. Feel free to
+[email](mailto:arthur@gonigberg.com) or
+[tweet](http://twitter.com/agonigberg)
+if you have any comments or corrections. 
+
+
