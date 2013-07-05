@@ -1,8 +1,8 @@
 --- 
 layout: post
-title: AngularJS -- Quick Role-Based Authentication
-meta-description: A quick guide for setting up role-based authentication in AngularJS
-published: false
+title: AngularJS -- Quick Route-Based Authentication
+meta-description: A quick guide for setting up route-based authentication in AngularJS
+#published: false
 ---
 
 We've recently started on a new product at [work](http://www.learndot.com "Learndot")
@@ -114,10 +114,10 @@ angular.module('yourApp').config(function ($httpProvider) {
       if (response.status === 401) {
         //redirect them back to login page
         $location.path('/login');
-        
 
         return $q.reject(response);
-      } else {
+      } 
+      else {
         return $q.reject(response);
       }
     };
