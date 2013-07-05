@@ -2,7 +2,7 @@
 layout: post
 title: AngularJS -- Quick Route-Based Authentication
 meta-description: A quick guide for setting up route-based authentication in AngularJS
-#published: false
+published: false
 ---
 
 We've recently started on a new product at [work](http://www.learndot.com "Learndot")
