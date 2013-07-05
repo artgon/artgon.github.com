@@ -2,7 +2,6 @@
 layout: post
 title: AngularJS -- Quick Route-Based Authentication
 meta-description: A quick guide for setting up route-based authentication in AngularJS
-published: false
 ---
 
 We've recently started on a new product at [work](http://www.learndot.com "Learndot")
@@ -168,7 +167,7 @@ Similarly, we'll need to make some minor changes to the authentication
 watch function -- from watching route change, to state change.
 
 {% highlight javascript %}
-angular.module('yourApp').run(function ($rootScope, $location, AuthenticationService, SessionService) {
+angular.module('yourApp').run(function ($rootScope, $location, AuthenticationService) {
 
   // enumerate routes that don't need authentication
   var routesThatDontRequireAuth = ['/login'];
@@ -205,21 +204,59 @@ The way to approach this would be have some sort of user object with
 roles, ideally specified in an injectable service:
 
 {% highlight javascript %}
-// todo user service
+angular.module('yourApp').factory('UserService', function () {
+
+  var currentUser = null;
+
+  var adminRoles = ['admin', 'editor'];
+  var otherRoles = ['user'];
+
+  return {
+    // some code that gets and sets the user to the singleton variable...
+
+    validateRoleAdmin: function () {
+      return _.contains(adminRoles, currentUser.role);
+    },
+
+    validateRoleOther: function () {
+      return _.contains(otherRoles, currentUser.role);
+    }
+  };
+});
 {% endhighlight %}
  
 Then inject this _UserService_ into the authentication watcher for
 further authorization, after the authentication step. Or, probably more
-ideally, you would want to create an _AuthorizationService_. It would
+ideally, you would want to create an _AuthorizationService_ and separate
+it from the _UserService_ (i.e. separation of concerns). It would
 look something like this:
 
 {% highlight javascript %}
-// todo revamped watch
+angular.module('yourApp').run(function ($rootScope, $location, AuthenticationService, UserService) {
+
+  // enumerate routes that don't need authentication
+  var routesThatDontRequireAuth = ['/login'];
+  var routesThatForAdmins = ['/admin'];
+
+  // check if route does not require authentication
+  var routeClean = function(route) { //... }
+  // check if route requires admin priviledge
+  var routeAdmin = function(route) { //... }
+
+  $rootScope.$on('$stateChangeStart', function (ev, to, toParams, from, fromParams) {
+    if (!routeClean($location.url()) && !AuthenticationService.isLoggedIn()) {
+      // redirect back to login
+      $location.path('/login');
+    }
+    else if (routeAdmin($location.url() && !UserService.validateRoleAdmin()) {
+      // redirect to error page
+      $location.path('/error');
+    }
+  });
+});
 {% endhighlight %}
  
-Hope you found this tutorial useful. Feel free to
-[email](mailto:arthur@gonigberg.com) or
-[tweet](http://twitter.com/agonigberg)
-if you have any comments or corrections. 
+Hope you found this tutorial useful. Feel free to [email](mailto:arthur@gonigberg.com) or
+[tweet](http://twitter.com/agonigberg) me if you have any comments or corrections. 
 
 
