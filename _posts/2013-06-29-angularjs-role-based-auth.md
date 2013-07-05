@@ -13,7 +13,7 @@ scratch on a new framework. One of the best resources in the room was
 [David Mosher](https://twitter.com/dmosher "David Mosher"), who helped us get set up with
 [Lineman](https://linemanjs.com "Lineman") -- an awesome build framework based on
 [Grunt](http://gruntjs.com/ "Grunt") -- and pointed us to some of his [video tutorials](http://www.youtube.com/user/vidjadavemo). 
-Honestly, these were a great resource for getting started and highly recommend watching them. The following tutorial is heavily inspired by 
+Honestly, these were a great resource for getting started and I highly recommend watching them. The following tutorial is heavily inspired by 
 the examples David provided. 
 
 <!--more-->
@@ -135,7 +135,7 @@ be _401_ then we send the user back to the login page.
 One of the more useful plugins for angular is [ui-router](https://github.com/angular-ui/ui-router "UI Router"). 
 This plugin allows you to create more powerful constructs with your
 states by using inheritance and substate transitions. Using _ui-router_,
-our route definition would as follows:
+our route definition would be as follows:
 
 {% highlight javascript %}
 angular.module('yourApp').config(function ($stateProvider, $urlRouterProvider) {
