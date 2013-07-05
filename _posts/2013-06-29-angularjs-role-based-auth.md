@@ -62,8 +62,6 @@ there are significantly more that do.
 {% highlight javascript %}
 angular.module('yourApp').run(function ($rootScope, $location, AuthenticationService) {
 
-  'use strict';
-
   // enumerate routes that don't need authentication
   var routesThatDontRequireAuth = ['/login'];
 
@@ -103,8 +101,6 @@ goes to [David Mosher](https://twitter.com/dmosher "David Mosher") on this one):
 {% highlight javascript %}
 angular.module('yourApp').config(function ($httpProvider) {
 
-  'use strict';
-
   var logsOutUserOn401 = ['$q', '$location', function ($q, $location) {
     var success = function (response) {
       return response;
@@ -136,5 +132,10 @@ validate them to make sure they are not _401_ errors. If they happen to
 be _401_ then we send the user back to the login page.
 
 #### Mixing in UI-Router
+
+asdf
+
+
+#### Expanding into Role-Based Authentication
 
 asdf
