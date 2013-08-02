@@ -11,7 +11,7 @@ room on [freenode](http://freenode.net/ "Freenode"). There seems to be a really 
 community around AngularJS and that's always helpful when starting from
 scratch on a new framework. One of the best resources in the room was
 [David Mosher](https://twitter.com/dmosher "David Mosher"), who helped us get set up with
-[Lineman](https://linemanjs.com "Lineman") -- an awesome build framework based on
+[Lineman](http://linemanjs.com "Lineman") -- an awesome build framework based on
 [Grunt](http://gruntjs.com/ "Grunt") -- and pointed us to some of his [video tutorials](http://www.youtube.com/user/vidjadavemo). 
 Honestly, these were a great resource for getting started and I highly recommend watching them. The following tutorial is heavily inspired by 
 the examples David provided. 
