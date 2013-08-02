@@ -42,6 +42,9 @@ __Policies__ are simple -- they implemented a method that looks at the
 request and returns true or false. If the user is allowed to proceed or
 not. If the user is not allowed to proceed, then they are forwarded to a
 PolicyResponder (e.g. return a 404), otherwise the service is executed.
+Most importantly, any number of policies can be chained together for a
+given route or resource definition, or alternatively policies can also
+be declared global.
 
 __Services__ are the meat of your project. They do the heavy lifting,
 whether it be returning a data set or creating/updating objects in the
