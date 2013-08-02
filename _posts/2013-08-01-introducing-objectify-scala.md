@@ -69,7 +69,7 @@ their own, and will be injected just like any of the above components.
 
 This is the question I always ask myself when I see a new framework
 posted on Hacker News. I'm not going to offer you a sales pitch but
-rather talk about the benefits that we've observed in the last year.
+rather a point-form list of benefits that we've observed in the last year.
 
 - It's very simple -- there's no magic and less than 1000 lines of code
 - Single Responsibility and Encapsulation -- many small classes that are
