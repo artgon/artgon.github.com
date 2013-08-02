@@ -6,8 +6,8 @@ meta-description: Introducing the Objectify framework for structuring Scala web 
 
 It's a framework we developed almost a year ago, that has been running
 in production for over 10 months. It's so simple and effective that we
-have barely had to make any commits to it since. The framework I'm
-referring to is [Objectify.scala](https://github.com/learndot/Objectify.scala).
+have barely had to make any commits to it since. That framework
+is [Objectify.scala](https://github.com/learndot/Objectify.scala).
 
 Objectify was inspired by [James Golick's](http://jamesgolick.com)
 framework, [Objectify.rb](https://github.com/bitlove/objectify). He
@@ -65,17 +65,22 @@ ID in the path for a PUT or DELETE. We also use them to parse the JSON
 in a POST body into a Scala DTO. Resolvers can also have resolvers of 
 their own, and will be injected just like any of the above components.
 
-#### Advantages
+#### Why would I use this?
 
-- Single Responsibility/Encapsulation
-- DI w/o Singletons
-- Easier to reason about application
-  - Smaller, easier to understand classes
-- Simpler, shorter tests
-- No magic
+This is the question I always ask myself when I see a new framework
+posted on Hacker News. I'm not going to offer you a sales pitch but
+rather talk about the benefits that we've observed in the last year.
 
-#### Details
+- It's very simple -- there's no magic and less than 1000 lines of code
+- Single Responsibility and Encapsulation -- many small classes that are
+  do not directly depdendent, easy to reason about, and do exactly one thing.
+- Dependency injection without singletons -- useful for classes that
+  only require request scope
+- Simpler, shorter tests -- given small classes, they can be broken down
+  into distinct units that are easily testable.
 
-I introduced the framework at a Scala meetup a little ago, and you can
+#### More information
+
+I introduced the framework at a Scala meetup a little while ago, and you can
 find the slides [here](http://www.slideshare.net/artgon/scala-meetup-objectify-15072182). 
-You can also fork it on Github [here](https://github.com/learndot/Objectify.scala).
+You can also fork it and see more usage details on [Github](https://github.com/learndot/Objectify.scala).
