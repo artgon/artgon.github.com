@@ -2,7 +2,6 @@
 layout: post
 title: Introducing Objectify for Scala
 meta-description: Introducing the Objectify framework for structuring Scala web applications
-published: false
 ---
 
 It's a framework we developed almost a year ago, that has been running
@@ -35,9 +34,32 @@ policy management.
 
 #### Components
 
-- Policies
-- Services
-- Resolvers
+There are essentially four types of components for implemented the
+front-end of your application with Objectify: policies, services,
+responders and resolvers.
+
+__Policies__ are simple -- they implemented a method that looks at the
+request and returns true or false. If the user is allowed to proceed or
+not. If the user is not allowed to proceed, then they are forwarded to a
+PolicyResponder (e.g. return a 404), otherwise the service is executed.
+
+__Services__ are the meat of your project. They do the heavy lifting,
+whether it be returning a data set or creating/updating objects in the
+database. When a service is done executing it returns some sort of
+result to be passed on to its ServiceResponder.
+
+__Responders__ are responsible for taking a result and serializing into
+whatever format the service outputs. For example it can take a
+Scala list of users and convert it to a JSON array of user objects.
+There are two types of responders, one for failed policies and one for
+services.
+
+__Resolvers__ are the glue that wires everything together. They allow
+objects to be injected into all three of the above types. The most
+common way to use them, is for extracting values from the request and
+populating them into objects. For example, we use resolvers to grab the
+ID in the path for a PUT or DELETE. We also use them to parse the JSON
+in a POST body into a Scala DTO.
 
 #### Advantages
 
@@ -47,6 +69,8 @@ policy management.
   - Smaller, easier to understand classes
 - Simpler, shorter tests
 - No magic
+
+#### Details
 
 I introduced the framework at a Scala meetup a little ago, and you can
 find the slides [here](http://www.slideshare.net/artgon/scala-meetup-objectify-15072182). 
