@@ -58,11 +58,12 @@ There are two types of responders, one for failed policies and one for
 services.
 
 __Resolvers__ are the glue that wires everything together. They allow
-objects to be injected into all three of the above types. The most
+objects to be injected into all three of the above types on construction. The most
 common way to use them, is for extracting values from the request and
 populating them into objects. For example, we use resolvers to grab the
 ID in the path for a PUT or DELETE. We also use them to parse the JSON
-in a POST body into a Scala DTO.
+in a POST body into a Scala DTO. Resolvers can also have resolvers of 
+their own, and will be injected just like any of the above components.
 
 #### Advantages
 
