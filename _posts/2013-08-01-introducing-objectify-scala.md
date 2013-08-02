@@ -72,7 +72,7 @@ posted on Hacker News. I'm not going to offer you a sales pitch but
 rather a point-form list of benefits that we've observed in the last year.
 
 - It's very simple -- there's no magic and less than 1000 lines of code
-- Single Responsibility and Encapsulation -- many small classes that are
+- Single responsibility and encapsulation -- many small classes that are
   do not directly depdendent, easy to reason about, and do exactly one thing.
 - Dependency injection without singletons -- useful for classes that
   only require request scope
