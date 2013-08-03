@@ -10,7 +10,7 @@ have barely had to make any commits to it since. That framework
 is [Objectify.scala](https://github.com/learndot/Objectify.scala).
 
 Objectify was inspired by [James Golick's](http://jamesgolick.com)
-framework, [Objectify.rb](https://github.com/bitlove/objectify). He
+framework, [Objectify](https://github.com/bitlove/objectify). He
 [introduced](http://jamesgolick.com/2012/5/22/objectify-a-better-way-to-build-rails-applications.html) 
 it by describing why Rails needs to move away from fat models, and create a service layer. 
 In a sense this a move towards the Java/J2EE way of creating
