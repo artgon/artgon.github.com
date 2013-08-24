@@ -1,9 +1,9 @@
 .highlight {
   float: left;
   padding: 5px;
-  margin: 0 0 15px 60px;
   border: 1px solid #000;
-  width: 840px;
+  width: 90%;
+  margin: 0 5% 24px 5%;
   overflow-y: auto;
   overflow-x: auto;
   background-color: #383838;

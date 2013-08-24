@@ -172,7 +172,7 @@ a:hover {color:#FF2B06;}
 #arthurHeader {
   float:right; 
   margin-right: 10%;
-  margin-top: 0;
+  margin-top: -15px;
   width:auto;
   height:auto;
 }
@@ -181,7 +181,7 @@ a:hover {color:#FF2B06;}
 
 #wrapper {
 	width:100%; 
-  min-width: 320px;
+  min-width: 420px;
 	margin:0 auto; 
   height: 375px;
 }
@@ -293,8 +293,17 @@ a:hover {color:#FF2B06;}
   list-style:none; 
   line-height: 0;
 }
-#social li a {text-decoration:none;padding:3px 10px;border:none}
-#social img {width:32px;height:32px}
+
+#social li a {
+  text-decoration:none;
+  padding:3px 10px;
+  border:none
+}
+
+#social img {
+  width:32px;
+  height:32px
+}
 
 .credits {
   margin:35px 0 0 0;
