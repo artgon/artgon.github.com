@@ -52,8 +52,14 @@ blockquote, q {
    quotes: "" "";
 }
 
-.left {float:left}
-.right {float:right;margin-right:0!important;}
+.left {
+  float:left
+}
+
+.right {
+  float:right;
+  margin-right:0!important;
+}
 	
 .clearfix:after {
 	content: ".";
@@ -269,29 +275,37 @@ a:hover {color:#FF2B06;}
   padding:40px 0 0 0;
 }
 
-#footer img, #footer p {
-  margin:0 53px 10px 0; 
-  width: 100%;
+#footer img {
   max-width: 200px;
-  float:left
+}
+
+#footer img {
+  width: 100%;
 }
 
 #footer .about {
+  overflow: hidden;
   height: 245px; 
 }
 
 #footer .about p {
-  width: 23%;
+  width: 27%;
+  padding: 3%;
 }
 
-#socialWrapper {
-  width: 32px;
-  float: right;
+#social {
+  height: 32px;
+  margin-top: 30px;
 }
 
-#social { 
+#social ul { 
   list-style:none; 
   line-height: 0;
+}
+
+#social li {
+  width: 40px;
+  float: left;
 }
 
 #social li a {
@@ -301,13 +315,13 @@ a:hover {color:#FF2B06;}
 }
 
 #social img {
-  width:32px;
-  height:32px
+  width: 32px;
+  height: 32px;
 }
 
 .credits {
   margin:35px 0 0 0;
-  font-size:13px
+  font-size:13px;
 }
 .credits a {
   color:#f2f1ec;
