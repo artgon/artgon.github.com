@@ -192,6 +192,7 @@ a:hover {color:#FF2B06;}
 #wrapper {
 	width:100%; 
   min-width: 310px;
+  max-width: 1074px;
 	margin:0 auto; 
   height: 375px;
 }
@@ -262,7 +263,6 @@ a:hover {color:#FF2B06;}
 
 
 /*--- Footer ---*/
-
 #footer {
 	float:left;
   color:#f2f1ec;
@@ -273,12 +273,15 @@ a:hover {color:#FF2B06;}
 }
 
 .inner {
-  width:80%;
-  margin:0 auto;
+  max-width: 1074px;
+  width: 100%;
+  margin: 0 auto;
   padding:40px 0 0 0;
 }
 
 #footer .about {
+  width: 80%;
+  margin: 0 10% 0 10%;
   overflow: hidden;
   height: 245px; 
 }
@@ -299,7 +302,7 @@ a:hover {color:#FF2B06;}
 
 #social {
   height: 32px;
-  margin-top: 30px;
+  margin: 30px 10% 0 0;
 }
 
 #social ul { 
@@ -324,14 +327,19 @@ a:hover {color:#FF2B06;}
   height: 32px;
 }
 
+#copyright {
+  margin-left: 10%;
+}
 .credits {
   margin:35px 0 0 0;
   font-size:13px;
 }
+
 .credits a {
   color:#f2f1ec;
   text-decoration:none;
 }
+
 .credits a:hover {
   color:#FF2B06;
 }
