@@ -157,7 +157,7 @@ h3 {
 
   border-top: 1px solid #c6c5c1;
   border-bottom: 1px solid #c6c5c1;
-  padding: 3px 0 3px 0;
+  padding: 5px 0 5px 0;
 }
 
 h4 {float:left;margin:0 0 20px 0;font-size:20px;}
@@ -212,7 +212,7 @@ a:hover {color:#FF2B06;}
 
 #nav li {
   float:left;
-  margin:7px 3% 0 0;
+  margin:7px 5% 0 0;
 }
 #nav li a {
   color:#f2f1ec;
@@ -338,7 +338,7 @@ a:hover {color:#FF2B06;}
 
 @media only screen and (max-width: 486px) {
     #nav li {
-      width: 30%;
+      width: 28%;
       text-align: center;
     }
 
