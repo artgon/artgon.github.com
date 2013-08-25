@@ -58,7 +58,7 @@ blockquote, q {
 
 .right {
   float:right;
-  margin-right:0!important;
+  margin-right:0;
 }
 	
 .clearfix:after {
@@ -187,7 +187,7 @@ a:hover {color:#FF2B06;}
 
 #wrapper {
 	width:100%; 
-  min-width: 420px;
+  min-width: 310px;
 	margin:0 auto; 
   height: 375px;
 }
@@ -208,7 +208,7 @@ a:hover {color:#FF2B06;}
 
 #nav li {
   float:left;
-  margin:7px 37px 0 0;
+  margin:7px 3% 0 0;
 }
 #nav li a {
   color:#f2f1ec;
@@ -275,22 +275,23 @@ a:hover {color:#FF2B06;}
   padding:40px 0 0 0;
 }
 
-#footer img {
-  max-width: 200px;
-}
-
-#footer img {
-  width: 100%;
-}
-
 #footer .about {
   overflow: hidden;
   height: 245px; 
 }
 
-#footer .about p {
+#footer img {
+  width: 100%;
+  max-width: 200px;
+}
+
+#about-img {
   width: 27%;
-  padding: 3%;
+  padding-right: 5%;
+}
+
+#about-text {
+  width: 60%;
 }
 
 #social {
@@ -299,6 +300,7 @@ a:hover {color:#FF2B06;}
 }
 
 #social ul { 
+  width: 100%;
   list-style:none; 
   line-height: 0;
 }
@@ -331,4 +333,27 @@ a:hover {color:#FF2B06;}
   color:#FF2B06;
 }
 
+@media only screen and (max-width: 486px) {
+    #copyright {
+      display: none;
+    }
+
+    #social {
+      width: 80%;
+      margin-right: 10%;
+      margin-left: 10%;
+    }
+    
+    #social li {
+      width: 20%;
+    }
+    
+    #about-img {
+      display: none;
+    }
+
+    #about-text {
+      width: 100%;
+    }
+}
 

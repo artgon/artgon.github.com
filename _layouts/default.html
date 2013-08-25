@@ -62,15 +62,18 @@
 	<div id="footer">
 		<div class="inner">
       <div class="about" id="about">
-			  <p><img src="/images/me.jpg" alt="me" /></p>
-        <p>Hello, I'm Arthur. I work as a Software Developer in Vancouver, Canada. <br/><br/>Feel free to contact me using any of the links on right.</p>
+			  <p id="about-img"><img src="/images/me.jpg" alt="me" /></p>
+        <p id="about-text">Hello, I'm Arthur. I work as a Software Developer in Vancouver, Canada. <br/><br/>
 
-        <p>Currently my focus is on test-driven software design and
-        development for scalable web services and web applications. 
-        This site is largely dedicated, but not limited to, topics in this area.</p>
+          Currently my focus is on test-driven software design and
+          development for scalable web services and web applications. 
+          This site is largely dedicated, but not limited to, topics in this area.<br/></br>
+
+          Feel free to contact me using any of the links below.
+        </p>
       </div>
 			<div class="clearfix"></div>
-			<div class="credits left">&copy; Copyright {{ site.time | date: "%Y "}} <a href="http://arthur.gonigberg.com"><span class="oranje">Arthur</span>Gonigberg</a></div>
+			<div id="copyright" class="credits left">&copy; Copyright {{ site.time | date: "%Y "}} <a href="http://arthur.gonigberg.com"><span class="oranje">Arthur</span>Gonigberg</a></div>
 
       <div id="social" class="credits right">
         <ul>
