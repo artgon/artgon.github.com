@@ -153,7 +153,11 @@ h3 {
 	font-weight:normal;
 	font-size:30px;
 	line-height:30px;
-	width:80%;
+	width: 100%;
+
+  border-top: 1px solid #c6c5c1;
+  border-bottom: 1px solid #c6c5c1;
+  padding: 3px 0 3px 0;
 }
 
 h4 {float:left;margin:0 0 20px 0;font-size:20px;}
@@ -234,7 +238,6 @@ a:hover {color:#FF2B06;}
   margin-left: 10%;
   margin-right: 10%;
 	padding:10px 0 0 0;
-	background:url(../images/box-bg.png) top left repeat-x
 }
 .small, .small p  {width:0px;}
 .big, .big p  {width:100%;}
@@ -334,6 +337,18 @@ a:hover {color:#FF2B06;}
 }
 
 @media only screen and (max-width: 486px) {
+    #nav li {
+      width: 30%;
+      text-align: center;
+    }
+
+    #arthurHeader {
+      width: 80%;
+      margin-right: 10%;
+      margin-left: 10%;
+      text-align: center;
+    }
+
     #copyright {
       display: none;
     }
