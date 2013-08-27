@@ -23,31 +23,40 @@ table, caption, tbody, tfoot, thead, tr, th, td {
    font-family: inherit;
    vertical-align: baseline;
 }
+
 :focus {
    outline: 0;
 }
+
 body {
    line-height: 22px;
 }
+
 ul {
    list-style: none;
 }
+
 ol {
   float: left;
   margin: 0 50px 20px 50px;
 }
+
 table {
    border-collapse: separate;
    border-spacing: 0;
 }
+
 caption, th, td {
    text-align: left;
    font-weight: normal;
 }
+
 blockquote:before, blockquote:after,
+
 q:before, q:after {
    content: "";
 }
+
 blockquote, q {
    quotes: "" "";
 }
@@ -341,6 +350,10 @@ a:hover {
 #about-img {
   width: 27%;
   padding-right: 5%;
+}
+
+#about-img img {
+  border: 1px solid #f2f1ec;
 }
 
 #about-text {
