@@ -160,8 +160,16 @@ h3 {
   padding: 5px 0 5px 0;
 }
 
-h4 {float:left;margin:0 0 20px 0;font-size:20px;}
-h5 {float:left;margin:0 0 10px 0;font-size:18px;}
+h4 {
+  float:left;
+  margin:0 0 20px 0;
+  font-size:20px;
+}
+h5 {
+  float:left;
+  margin:0 0 10px 0;
+  font-size:18px;
+}
 
 p, ul, blockquote {
   font-size:16px;
@@ -171,13 +179,29 @@ p, ul, blockquote {
   float:left;
 }
 
-em {font-style:italic;border-bottom:1px dashed;}
-strong {font-weight:bold;color:#FF2B06;}
+em {
+  font-style:italic;
+  border-bottom:1px dashed;
+}
 
-a {color:#383838;border-bottom:1px solid;text-decoration:none;}
-a:hover {color:#FF2B06;}
+strong {
+  font-weight:bold;
+  color:#FF2B06;
+}
 
-.oranje {color:#FF2B06}
+a {
+  color:#383838;
+  border-bottom:1px solid;
+  text-decoration:none;
+}
+
+a:hover {
+  color:#FF2B06;
+}
+
+.oranje {
+  color:#FF2B06
+}
 
 #arthurHeader {
   float:right; 
@@ -215,21 +239,28 @@ a:hover {color:#FF2B06;}
   float:left;
   margin:7px 5% 0 0;
 }
+
 #nav li a {
   color:#f2f1ec;
   text-decoration:none;
   padding:3px 10px;
   border:none;
 }
+
 #nav li a:hover {
   color:#FF2B06;
 }
-#nav li#first a {padding-left:0}
+
+#nav li#first a {
+  padding-left:0;
+}
 
 
 /*--- Header ---*/
 
-#header {height:137px}
+#header {
+  height:137px;
+}
 
 /*--- Content ---*/
 
@@ -240,12 +271,20 @@ a:hover {color:#FF2B06;}
   margin-right: 10%;
 	padding:10px 0 0 0;
 }
-.small, .small p  {width:0px;}
-.big, .big p  {width:100%;}
+
+.small, .small p {
+  width:0px;
+}
+
+.big, .big p {
+  width:100%;
+}
+
 .big ul {
   list-style: circle;
   margin: 0 0 1em 2em;  
 }
+
 .big blockquote {
   border-left: 1px solid #383838;
   padding: 0 1em 0 1em;
