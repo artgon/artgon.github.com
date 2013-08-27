@@ -383,7 +383,7 @@ a:hover {
   color:#FF2B06;
 }
 
-@media only screen and (max-width: 486px) {
+@media only screen and (max-width: 768px) {
     #nav li {
       width: 28%;
       text-align: center;
