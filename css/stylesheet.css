@@ -404,7 +404,7 @@ a:hover {
   color:#FF2B06;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 735px) {
     #nav, .box, #footer .about {
       width: 90%;
       margin-right: 5%;
