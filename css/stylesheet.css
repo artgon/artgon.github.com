@@ -405,6 +405,12 @@ a:hover {
 }
 
 @media only screen and (max-width: 768px) {
+    #nav, .box, #footer .about {
+      width: 90%;
+      margin-right: 5%;
+      margin-left: 5%;
+    }
+    
     #nav li {
       width: 33%;
       text-align: center;
