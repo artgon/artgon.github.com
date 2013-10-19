@@ -18,7 +18,9 @@
     <title>Page Not Found</title>
     <link rel="stylesheet" href="/css/stylesheet.css" type="text/css" media="screen" /> 
     <link rel="stylesheet" href="/css/syntax.css" type="text/css" media="screen" /> 
-    <link rel="alternate" type="application/atom+xml" title="Feed" href="/atom.xml" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="aqLgYQYx0RJnTELokuzelTUZOpcf69AJ5AloAVUfR_8" />
     <script type="text/javascript">
 
     var _gaq = _gaq || [];
@@ -36,40 +38,49 @@
 <body>
 	<div id="wrapper">
 		<div id="header">
-			<ul id="nav">
-				<li id="first"><a href="/">Recent</a></li>
-				<li><a href="/archive">Archive</a></li>
-				<li><a href="#about">About</a></li>
-			</ul>
+      <nav>
+        <ul id="nav">
+          <li id="first"><a href="/">Recent</a></li>
+          <li><a href="/archive">Archive</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
       <h2 id="arthurHeader"><span class="oranje">Arthur</span>Gonigberg</h2>
 			<div class="clearfix"></div>
 		</div><!--header-->
 		<div id="content">
 
-      I think you might be lost...
+      <div class="box">
+        I think you might be lost...
+      </div>
 
 		</div><!--content-->
 	</div><!--wrapper-->
 	<div id="footer">
 		<div class="inner">
       <div class="about" id="about">
-			  <p><img src="/images/me.jpg" alt="me" /></p>
-        <p>Hello, I'm Arthur. I work as a Software Developer in Vancouver, Canada. <br/><br/>Feel free to contact me using any of the links on right.</p>
+			  <p id="about-img"><img src="/images/me-brick.png" alt="me" /></p>
+        <p id="about-text">Hello, I'm Arthur. I work as a Software Developer in Vancouver, Canada. <br/><br/>
 
-        <p>Currently my focus is on agile, test-driven software design and development for Java web services and Java-based web applications. This site is largely dedicated, but not limited to, topics in these areas.</p>
-        <div id="socialWrapper">
-          <ul id="social">
-            <li><a href="mailto:arthur@gonigberg.com"><img src="/images/email.png" alt="Email" height="32" width="32"/></a></li>
-            <li><a href="http://twitter.com/agonigberg"><img src="/images/twitter.png" alt="Twitter" height="32" width="32"/></a></li>
-            <li><a href="https://plus.google.com/106096806381566966975/posts"><img src="/images/google.png" alt="Google Plus" height="32" width="32"/></a></li>
-            <li><a href="http://linkedin.com/in/artgon"><img src="/images/linkedin.png" alt="LinkedIn" height="32" width="32"/></a></li>
-            <li><a href="http://github.com/artgon"><img src="/images/github.png" alt="Github" height="32" width="32"/></a></li>
-          </ul>
-        </div>
+          Currently my focus is on test-driven software design and
+          development for scalable web services and web applications. 
+          This site is largely dedicated, but not limited to, topics in this area.<br/></br>
+
+          Feel free to contact me using any of the links below.
+        </p>
       </div>
 			<div class="clearfix"></div>
-			<div class="credits left">&copy; Copyright 2012 <a href="http://arthur.gonigberg.com"><span class="oranje">Arthur</span>Gonigberg</a></div>
-			<div class="credits right">Adapted from layout by <a href="http://john.onolan.org">John <span class="oranje">O’No!</span>an</a></div>
+			<div id="copyright" class="credits left">&copy; Copyright 2013 <a href="http://arthur.gonigberg.com"><span class="oranje">Arthur</span>Gonigberg</a></div>
+
+      <div id="social" class="credits right">
+        <ul>
+          <li><a href="mailto:arthur@gonigberg.com"><img src="/images/email.png" alt="Email" height="32" width="32"/></a></li>
+          <li><a href="http://twitter.com/agonigberg"><img src="/images/twitter.png" alt="Twitter" height="32" width="32"/></a></li>
+          <li><a href="https://plus.google.com/106096806381566966975/posts"><img src="/images/google.png" alt="Google Plus" height="32" width="32"/></a></li>
+          <li><a href="http://linkedin.com/in/artgon"><img src="/images/linkedin.png" alt="LinkedIn" height="32" width="32"/></a></li>
+          <li><a href="http://github.com/artgon"><img src="/images/github.png" alt="Github" height="32" width="32"/></a></li>
+        </ul>
+      </div>
 		</div>
 	</div><!--footer-->
 </body>
