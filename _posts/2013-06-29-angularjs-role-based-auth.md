@@ -259,7 +259,7 @@ angular.module('yourApp').run(function ($rootScope, $location, AuthenticationSer
 Hope you found this tutorial useful. Feel free to [email](mailto:arthur@gonigberg.com) or
 [tweet](http://twitter.com/agonigberg) me if you have any comments or corrections. 
 
-### Update
+#### Update
 
 I have had quite a few requests for a working code sample for this post. I spent some
 time putting one together and you can find
