@@ -1,0 +1,66 @@
+==================================================================
+https://keybase.io/artgon
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://arthur.gonigberg.com
+  * I am artgon (https://keybase.io/artgon) on keybase.
+  * I have a public key with fingerprint 5B49 09A4 9D2D C3E2 690D  A9F2 5796 F37D 400B D302
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "5b4909a49d2dc3e2690da9f25796f37d400bd302",
+            "host": "keybase.io",
+            "key_id": "5796f37d400bd302",
+            "uid": "457446cb6cb450a69bd89a364d0d4d00",
+            "username": "artgon"
+        },
+        "service": {
+            "hostname": "arthur.gonigberg.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1396034401,
+    "expire_in": 157680000,
+    "prev": "ad6a43177afc95665a1c68eb8809f263e7c674c4c895c6bc9c550a10c1ba0703",
+    "seqno": 7,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v0.1.1
+Comment: https://keybase.io/crypto
+
+yMH1AnicZZFtSBRbGMd3r6m1JJZoFArdxqCiZZ3ZeduzZljK9RqkkpJ9KLYzZ86u
+U7mzzs7uTddV45Z7DYJEi8tNWgL1opXFJXwpqE3CD61RIJYLZYkIEtXtQ/QCpp6R
+og8NZxjO8/ye//955nmQlmSymPXY9ssNzeVt5njsU8BUycdhiJJUuZ5yhqjjeOXj
+VrwerPk0xatTToqXOEADyAHZLiMW2wVAyxC47bwIBDcryhxNSzJL2ykrVaP6jQoi
+I0E/tikqiZGLS5ENnZ/5wEqC40WOE5BEDsfTUACS7ACQFTiZlslLG6Afa15YiwkN
+Nd2jeqmwlSKxoIJILLRi/CNfE9BshFE8EtY8NqTWEgWfpuoqUk8QokbXfU5DQK/3
+GRV/YMn1TcslKV6ZTE8KgljzK8TIyRAS6YohzrBAoFmOoxkrhU/6FA27FIPgRcFB
+k8ewwUGjCVmAHMuIInQjwAsCDxkkOLDkcNDkzwksFpEgcohDDsAjQUIA8WRyhkaM
+BGmRZom/H9d5Vcopkjahh0j6FY8X6gENU+HR2OFVJrPFlJL8i7E/k2XNuu9bPRBN
+Xdpfu2/m4OZEZHX2fCe7kDFX4SwdqXqffiOnfLDaXtyzZL0NMqsf2SJtWR1zd6fn
+x+70xcbi3XJTV/mG9pzG3OzZtZGM8Q9HRlsS6x+f2jvfPFl69ZrS31i1J2Wo7ELV
+ppkzuT1bnbsmXINl94uOvkrf8V9qUfKXpCftWf2tZ49tHE9QIZsNnK9rcHwe6Aj/
+8+85kJiWOiNPYe9M08CVaMXFvL7+WGZB169v+cXdr/WHLz9qxZWtrc/y/5z6m3q3
++Ft1FITtzP/DQWvkxdRfBeaccP7p35s7NWvL7Jabbwrjw733Rq7vTHs+0DNRcimj
+ZNvk10NDI/Fbed2aZSE6YSm0LwMoZBXT
+=xEFF
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/artgon
+
+==================================================================
+
