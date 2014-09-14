@@ -24,38 +24,54 @@ _easy concurrency_ and _no null values_.[^1]
 
 #### Immutability by Default
 
-iLorem Ipsum is simply dummy text of the printing and typesetting
-industry. Lorem Ipsum has been the industry's standard dummy text ever
-since the 1500s, when an unknown printer took a galley of type and
-scrambled it to make a type specimen book. It has survived not only five
-centuries, but also the leap into electronic typesetting, remaining
-essentially unchanged. It was popularised in the 1960s with the release
-of Letraset sheets containing Lorem Ipsum passages, and more recently
-with desktop publishing software like Aldus PageMaker including versions
-of Lorem Ipsum.
+
+_Case 1: Labelling all variables as final_
+
+Example:
+
+// TODO
+
+_Case 2: Utility classes require boiler plate_
+
+Example:
+
+// TODO
+
+_Case 3: Try/catch flows with awkward return points_
+
+Example:
+
+// TODO
 
 #### Easy Concurrency
 
-Lorem Ipsum is simply dummy text of the printing and typesetting
-industry. Lorem Ipsum has been the industry's standard dummy text ever
-since the 1500s, when an unknown printer took a galley of type and
-scrambled it to make a type specimen book. It has survived not only five
-centuries, but also the leap into electronic typesetting, remaining
-essentially unchanged. It was popularised in the 1960s with the release
-of Letraset sheets containing Lorem Ipsum passages, and more recently
-with desktop publishing software like Aldus PageMaker including versions
-of Lorem Ipsum.
+Easy concurrency sounds like the famous last words of a cocky 
+brogrammer. What I mean by the word "easy" is that the it's easy
+to reason about. The concurrency method encouraged is the actor 
+model. The biggest advantage of the actor model is not one of 
+performance or clustering -- it's correctness. Having a guarantee
+that the code inside an actor will only ever be run by one thread
+makes the code incredibly easy to reason about. 
+
+Example:
+
+// TODO
 
 #### No Null Values
 
-Lorem Ipsum is simply dummy text of the printing and typesetting
-industry. Lorem Ipsum has been the industry's standard dummy text ever
-since the 1500s, when an unknown printer took a galley of type and
-scrambled it to make a type specimen book. It has survived not only five
-centuries, but also the leap into electronic typesetting, remaining
-essentially unchanged. It was popularised in the 1960s with the release
-of Letraset sheets containing Lorem Ipsum passages, and more recently
-with desktop publishing software like Aldus PageMaker including versions
-of Lorem Ipsum.
+The most common exception in Java application is the NullPointerException. There
+is a weird separation of objects and primitives. Primitives cannot be set to
+null, while objects get set to null all the time. I would argue that the majority
+of Java programmers still use null types as a return knowingly, as just another
+strategy for control flow.
+
+JDK 8 has alleviated some of this pain with an _Optional<T>_ class that allows you
+to wrap null types and unwrap them safely. Unfortunately, the _Optional_ object can 
+be set to null!
+
+Example:
+
+// TODO
+
 
 [^1]: When calling Java code you may get null values but you cannot set a value to null in Scala code. 
