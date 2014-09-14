@@ -9,4 +9,4 @@ include: ['.well-known']
 
 markdown: rdiscount
 rdiscount:
-  extensions: []
+  extensions: ['footnotes']
