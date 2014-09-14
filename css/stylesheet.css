@@ -458,10 +458,14 @@ sup {
 }
 
 .footnotes {
-  float: right;
+  float: left;
   width: 100%;
 }
 
 .footnotes p {
   float: right;
+}
+
+.footnotes li {
+  float: left;
 }

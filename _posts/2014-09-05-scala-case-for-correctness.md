@@ -65,9 +65,14 @@ null, while objects get set to null all the time. I would argue that the majorit
 of Java programmers still use null types as a return knowingly, as just another
 strategy for control flow.
 
-JDK 8 has alleviated some of this pain with an _Optional<T>_ class that allows you
-to wrap null types and unwrap them safely. Unfortunately, the _Optional_ object can 
-be set to null!
+JDK 8 has alleviated some of this pain with an _Optional<T\>_ class that allows you
+to wrap null types and unwrap them safely. Unfortunately, the _Optional<T\>_ object can 
+be set to null! This means that you may have to null check the object that's supposed
+to save you from getting null errors.
+
+This is of course part of the bigger problem that Scala intrinsically solves. _Null_ is 
+a type in Scala just like any other.[^2] You cannot set an object to _Null_ unless that is 
+its type. If you try to set an _Int_ to _Null_, you'll get a compile error.
 
 Example:
 
@@ -75,3 +80,4 @@ Example:
 
 
 [^1]: When calling Java code you may get null values but you cannot set a value to null in Scala code. 
+[^2]: In reality you should never use the _Null_ type. It only exists for Java interop compatibility. Ideally you should always use the _Option[T]_ class.
