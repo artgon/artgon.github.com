@@ -460,12 +460,16 @@ sup {
 .footnotes {
   float: left;
   width: 100%;
+  font-size: 14px;
 }
 
 .footnotes p {
   float: right;
+  font-size: 14px;
+  margin: 0;
 }
 
 .footnotes li {
   float: left;
+  margin-top: 10px;
 }

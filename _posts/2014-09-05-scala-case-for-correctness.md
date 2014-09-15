@@ -154,12 +154,12 @@ class SimpleCounter extends Actor {
 }
 
 val system = ActorSystem("system")
-val a = system.actorOf(Props(new SimpleCounter), "counter")
+val counter = system.actorOf(Props(new SimpleCounter), "counter")
 
-a ! "add"
-a ! "add"
-a ! "add"
-a ! "echo" // 3
+counter ! "add"
+counter ! "add"
+counter ! "add"
+counter ! "echo" // 3
 {% endhighlight %}
 
 Simple, intuitive, correct. I challenge you to do better in Java. 
