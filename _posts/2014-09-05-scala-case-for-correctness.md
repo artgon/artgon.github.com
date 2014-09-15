@@ -18,8 +18,8 @@ why is correctness.
 
 The main selling points for Scala have generally been the 
 syntactic sugar and the functional programming paradigms, but correctness is 
-so much more important. The key features being: _immutability by default_, 
-_easy concurrency_ and _no null values_.[^1]
+so much more important. The key features being: immutability by default, 
+easy concurrency and no null values.[^1]
 
 
 #### Immutability by Default
@@ -27,35 +27,142 @@ _easy concurrency_ and _no null values_.[^1]
 
 _Case 1: Labelling all variables as final_
 
-Example:
+In Java, in order to make sure that methods do not mutate anything, you need
+to mark all parameters as final, and then inner variable all need to be marked
+as final in order to ensure immutability.
 
-// TODO
+{% highlight java %}
+public void doStuff(final Integer thing1, final String thing2, final List<Integer> thing3)
+{
+  final String someCalculation = thing1 + thing2 + thing3.size();
+  final String someOtherCalculation = thing1 + thing2;
+  System.out.println(someCalculation + someOtherCalculation);
+}
+{% endhighlight %}
+
+You need to jump through a few hoops to make sure everything is immutable and 
+you quickly get semantic satiation for the word "final." This probably involves using
+your IDE to enforce this rule. In Scala, everything is immutable by default:
+
+{% highlight scala %}
+def doStuff(thing1: Int, thing2: String, thing3: List[Int]) {
+  val someCalculation = thing1 + thing2 + thing3.size
+  val someOtherCalculation = thing1 + thing2
+  println(someCalculation + someOtherCalculation)
+}
+{% endhighlight %}
 
 _Case 2: Utility classes require boiler plate_
 
-Example:
+Utility classes in Scala simple, especially if you want them to be singletons.
 
-// TODO
+{% highlight scala %}
+object UtilityClass {
+  def utilityAdd(a: Int, b: Int) = {
+    a + b
+  }
+}
+{% endhighlight %}
 
-_Case 3: Try/catch flows with awkward return points_
+This creates a singleton class that cannot be instantiated via constructor
+and is ensured by the classloader to only be loaded once.
 
-Example:
+In Java, some boiler plate is required in order to ensure non-instantiation of
+utility classes (and singletons).
 
-// TODO
+{% highlight java %}
+public final class UtilityClass 
+{
+  private UtilityClass
+  {
+    throw new UnsuportedOperationException();
+  }
+
+  public static Integer utilityAdd(Integer a, Integer b)
+  {
+    return a + b;
+  }
+}
+{% endhighlight %}
+
+When creating a singleton in Java (without frameworks support) a 
+[similar approach](http://en.wikipedia.org/wiki/Singleton_pattern#Eager_initialization)
+is required. This is an ugly workaround for the lack of proper, non-static singleton
+components.
+
+_Case 3: Try/catch flow is not an expression_
+
+The biggest thing about the try/catch flow in Java that drives me nuts is that the 
+try/catch block is not an expression. This means that you cannot set the result of a
+try/catch to an immutable value unless you wrap it in a separate function.
+
+{% highlight java %}
+Integer parsedResults = 0;
+try
+{
+  final List<Integer> results = new ArrayList<Integer>() { 
+    { add(1); add(2); add(3); add(4); add(5); } 
+  }
+  parsedResults = results.size();
+}
+catch (final Exception e)
+{
+  parsedResults = 0;
+}
+{% endhighlight %}
+
+In the above example, you cannot mark _parsedResults_ final because it cant get set right away.
+The only workaround is to abstract the try/catch into its own method.
+
+{% highlight scala %}
+val parsedResults = try {
+  List(1,2,3,4,5).size
+}
+catch {
+  case e: Exception => 0
+}
+{% endhighlight %}
+
+Having the result be an expression simplifies the code and allows you to set it to an immutable variable.
 
 #### Easy Concurrency
 
-Easy concurrency sounds like the famous last words of a cocky 
+If you've read Brian Goetz's [Java Concurrency in Practice](http://www.amazon.ca/Java-Concurrency-Practice-Brian-Goetz/dp/0321349601)
+, you realize fairly quickly that writing multithreaded code in 
+Java is terrifying. I'm pretty sure that most threading code out 
+there is broken, especially my own. This is not because of bad 
+programmers, it's because _writing concurrent code is hard!_
+
+"Easy concurrency" sounds like the famous last words of a cocky 
 brogrammer. What I mean by the word "easy" is that the it's easy
-to reason about. The concurrency method encouraged is the actor 
+to reason about. The concurrency method encouraged in Scala is the actor 
 model. The biggest advantage of the actor model is not one of 
 performance or clustering -- it's correctness. Having a guarantee
 that the code inside an actor will only ever be run by one thread
-makes the code incredibly easy to reason about. 
+makes the code incredibly easy to reason about.
 
-Example:
+Here's a simple threaded counter example in Scala
 
-// TODO
+{% highlight scala %}
+class SimpleCounter extends Actor {
+  var count = 0
+  def receive = {
+      case "add" => count += 1
+      case "echo" => println(count)
+      case _     => // do nothing
+  }
+}
+
+val system = ActorSystem("system")
+val a = system.actorOf(Props(new SimpleCounter), "counter")
+
+a ! "add"
+a ! "add"
+a ! "add"
+a ! "echo" // 3
+{% endhighlight %}
+
+Simple, intuitive, correct. I challenge you to do better in Java. 
 
 #### No Null Values
 
