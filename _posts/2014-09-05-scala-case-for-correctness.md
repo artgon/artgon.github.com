@@ -147,9 +147,9 @@ Here's a simple threaded counter example in Scala
 class SimpleCounter extends Actor {
   var count = 0
   def receive = {
-      case "add" => count += 1
-      case "echo" => println(count)
-      case _     => // do nothing
+    case "add" => count += 1
+    case "echo" => println(count)
+    case _     => // do nothing
   }
 }
 
@@ -162,7 +162,10 @@ counter ! "add"
 counter ! "echo" // 3
 {% endhighlight %}
 
-Simple, intuitive, correct. I challenge you to do better in Java. 
+Simple, intuitive, correct. Although this is a trivial example, you'll notice
+that you don't have to worry about the shared state of the _count_ variable. You
+don't have to make it atomic or make the addition to it synchronized. You have a 
+guarantee that only one thread will execute that code at a time.
 
 #### No Null Values
 
@@ -181,9 +184,20 @@ This is of course part of the bigger problem that Scala intrinsically solves. _N
 a type in Scala just like any other.[^2] You cannot set an object to _Null_ unless that is 
 its type. If you try to set an _Int_ to _Null_, you'll get a compile error.
 
-Example:
+{% highlight console %}
+scala> val x: Int = null
+<console>:7: error: an expression of type Null is ineligible for implicit conversion
+       val x: Int = null
+{% endhighlight %}
 
-// TODO
+Futhermore, because the _Option[T]_ type has been built into Scala from the beginning, every part
+of the standard library supports returning optional values, _None_ or _Some[T]_, when required.
+
+#### Correctness Matters
+
+Increasing correctness increases productivity. Producing code that works is something we all strive
+for and it's hard to argue against tools that make it easier. Despite the stability and maturity of 
+Java, I would still advocate using Scala where possible.
 
 
 [^1]: When calling Java code you may get null values but you cannot set a value to null in Scala code. 
