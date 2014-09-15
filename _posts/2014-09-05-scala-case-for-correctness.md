@@ -85,7 +85,7 @@ public final class UtilityClass
 }
 {% endhighlight %}
 
-When creating a singleton in Java (without frameworks support) a 
+When creating a singleton in Java (without framework support) a 
 [similar approach](http://en.wikipedia.org/wiki/Singleton_pattern#Eager_initialization)
 is required. This is an ugly workaround for the lack of proper, non-static singleton
 components.
@@ -102,7 +102,8 @@ try
 {
   final List<Integer> results = new ArrayList<Integer>() { 
     { add(1); add(2); add(3); add(4); add(5); } 
-  }
+  };
+  // do some processing that may throw an exception
   parsedResults = results.size();
 }
 catch (final Exception e)
@@ -111,19 +112,21 @@ catch (final Exception e)
 }
 {% endhighlight %}
 
-In the above example, you cannot mark _parsedResults_ final because it cant get set right away.
+In the above example, you cannot mark _parsedResults_ final because it can't get set right away.
 The only workaround is to abstract the try/catch into its own method.
 
 {% highlight scala %}
 val parsedResults = try {
-  List(1,2,3,4,5).size
+  val list = List(1,2,3,4,5)
+  // do some processing that may throw an exception
+  list.size
 }
 catch {
   case e: Exception => 0
 }
 {% endhighlight %}
 
-Having the result be an expression simplifies the code and allows you to set it to an immutable variable.
+Having the result be an expression simplifies the code and allows you to set the result to an immutable variable.
 
 #### Easy Concurrency
 
@@ -141,7 +144,7 @@ performance or clustering -- it's correctness. Having a guarantee
 that the code inside an actor will only ever be run by one thread
 makes the code incredibly easy to reason about.
 
-Here's a simple threaded counter example in Scala
+Here's a simple threaded counter example in Scala:
 
 {% highlight scala %}
 class SimpleCounter extends Actor {
@@ -197,7 +200,7 @@ of the standard library supports returning optional values, _None_ or _Some[T]_,
 
 Increasing correctness increases productivity. Producing code that works is something we all strive
 for and it's hard to argue against tools that make it easier. Despite the stability and maturity of 
-Java, I would still advocate using Scala where possible.
+Java, I would still choose Scala.
 
 
 [^1]: When calling Java code you may get null values but you cannot set a value to null in Scala code. 
