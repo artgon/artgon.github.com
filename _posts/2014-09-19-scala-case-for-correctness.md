@@ -25,7 +25,7 @@ easy concurrency and no null values.[^1]
 #### Immutability by Default
 
 
-_Case 1: Labelling all variables as final_
+_Labelling all variables as final_
 
 In Java, in order to make sure that methods do not mutate anything, you need
 to mark all parameters as final, and then inner variable all need to be marked
@@ -52,49 +52,11 @@ def doStuff(thing1: Int, thing2: String, thing3: List[Int]) {
 }
 {% endhighlight %}
 
-_Case 2: Utility classes require boiler plate_
+_Primitive blocks are not expressions_
 
-Utility classes in Scala simple, especially if you want them to be singletons.
-
-{% highlight scala %}
-object UtilityClass {
-  def utilityAdd(a: Int, b: Int) = {
-    a + b
-  }
-}
-{% endhighlight %}
-
-This creates a singleton class that cannot be instantiated via constructor
-and is ensured by the classloader to only be loaded once.
-
-In Java, some boiler plate is required in order to ensure non-instantiation of
-utility classes (and singletons).
-
-{% highlight java %}
-public final class UtilityClass 
-{
-  private UtilityClass
-  {
-    throw new UnsuportedOperationException();
-  }
-
-  public static Integer utilityAdd(Integer a, Integer b)
-  {
-    return a + b;
-  }
-}
-{% endhighlight %}
-
-When creating a singleton in Java (without framework support) a 
-[similar approach](http://en.wikipedia.org/wiki/Singleton_pattern#Eager_initialization)
-is required. This is an ugly workaround for the lack of proper, non-static singleton
-components.
-
-_Case 3: Try/catch flow is not an expression_
-
-The biggest thing about the try/catch flow in Java that drives me nuts is that the 
-try/catch block is not an expression. This means that you cannot set the result of a
-try/catch to an immutable value unless you wrap it in a separate function.
+The main issue with primitive blocks is that they're executed imperatively without a 
+return value. You cannot set the result of a try/catch to an immutable value 
+unless you wrap it in a separate function.
 
 {% highlight java %}
 Integer parsedResults = 0;
@@ -126,12 +88,14 @@ catch {
 }
 {% endhighlight %}
 
-Having the result be an expression simplifies the code and allows you to set the result to an immutable variable.
+Having the result be an expression simplifies the code and allows you to set the result to an immutable 
+variable. Other primitive blocks like _for_ and _while_ work much the same way in Scala.
 
 #### Easy Concurrency
 
-If you've read Brian Goetz's [Java Concurrency in Practice](http://www.amazon.ca/Java-Concurrency-Practice-Brian-Goetz/dp/0321349601)
-, you realize fairly quickly that writing multithreaded code in 
+If you've read Brian Goetz's 
+[Java Concurrency in Practice](http://www.amazon.ca/Java-Concurrency-Practice-Brian-Goetz/dp/0321349601)
+, you realize fairly quickly that writing multi-threaded code in 
 Java is terrifying. I'm pretty sure that most threading code out 
 there is broken, especially my own. This is not because of bad 
 programmers, it's because _writing concurrent code is hard!_
@@ -139,7 +103,7 @@ programmers, it's because _writing concurrent code is hard!_
 "Easy concurrency" sounds like the famous last words of a cocky 
 brogrammer. What I mean by the word "easy" is that the it's easy
 to reason about. The concurrency method encouraged in Scala is the actor 
-model. The biggest advantage of the actor model is not one of 
+model, via Akka.[^2] The biggest advantage of the actor model is not one of 
 performance or clustering -- it's correctness. Having a guarantee
 that the code inside an actor will only ever be run by one thread
 makes the code incredibly easy to reason about.
@@ -184,7 +148,7 @@ be set to null! This means that you may have to null check the object that's sup
 to save you from getting null errors.
 
 This is of course part of the bigger problem that Scala intrinsically solves. _Null_ is 
-a type in Scala just like any other.[^2] You cannot set an object to _Null_ unless that is 
+a type in Scala just like any other.[^3] You cannot set an object to _Null_ unless that is 
 its type. If you try to set an _Int_ to _Null_, you'll get a compile error.
 
 {% highlight console %}
@@ -193,7 +157,7 @@ scala> val x: Int = null
        val x: Int = null
 {% endhighlight %}
 
-Futhermore, because the _Option[T]_ type has been built into Scala from the beginning, every part
+Furthermore, because the _Option[T]_ type has been built into Scala from the beginning, every part
 of the standard library supports returning optional values, _None_ or _Some[T]_, when required.
 
 #### Correctness Matters
@@ -204,4 +168,5 @@ Java, I would still choose Scala.
 
 
 [^1]: When calling Java code you may get null values but you cannot set a value to null in Scala code. 
-[^2]: In reality you should never use the _Null_ type. It only exists for Java interop compatibility. Ideally you should always use the _Option[T]_ class.
+[^2]: Akka is also available for Java but it's not part of idiomatic Java, whereas it's the standard approach in Scala.
+[^3]: In reality you should never use the _Null_ type. It only exists for Java interop compatibility. Ideally you should always use the _Option[T]_ class.
