@@ -5,16 +5,17 @@ meta-description: Choosing Scala should not just be for brevity or speed -- it's
 published: false
 ---
 
-It's only a matter of time before managers are faced with eager Java developers 
+It's only a matter of time before Java shop managers are faced with eager developers 
 trying to push a new language on them. It's a hard sell. Java has mature tooling,
 tons of documentation, countless stackoverflow articles and lots of senior
 developers available to fill vacancies. Combine that with your team's expertise in
-Java and the rampup cost for a project that was probably supposed to be done yesterday.
+Java and the rampup cost for new language, on a project that was supposed to be 
+done yesterday.
 
 Needless to say, the benefits should be substantial enough that the investment is
-worth it. The typical selling point these developers are going to throw out are
-about the concise syntax or the functional programming paradigms but for me the biggest 
-benefit with Scala is __correctness__. 
+worth it. The typical selling points developers are going to throw out are the concise 
+syntax or the functional programming paradigms but for me the biggest benefit with 
+Scala is __correctness__. 
 
 <!--more-->
 
@@ -41,8 +42,9 @@ public void doStuff(final Integer thing1, final String thing2, final List<Intege
 {% endhighlight %}
 
 You need to jump through a few hoops to make sure everything is immutable and 
-you quickly get semantic satiation for the word "final." This probably involves using
-your IDE to enforce this rule. In Scala, everything is immutable by default:
+you quickly get semantic satiation for the word "final." Eventually, you'll use your
+IDE to enforce this rule and probably some static analysis to verify your builds, as 
+well. In Scala, everything is immutable by default:
 
 {% highlight scala %}
 def doStuff(thing1: Int, thing2: String, thing3: List[Int]) {
@@ -140,17 +142,17 @@ guarantee that only one thread will execute that code at a time.
 
 This doesn't mean that designing concurrent programs is necessarily easier. You still
 have to figure out contention, backpressure, responsiveness and so on. However, when 
-looking at any given actor, you know exactly what going on.
+looking at any given actor, you know exactly what's going on.
 
 #### No Null Values
 
 The most common exception in Java application is the NullPointerException. Java has 
 always had issues separating objects and primitives. Primitives cannot be set to
-null, while objects get set to null all the time. When you look at a String type 
-it's either a String or a null and that goes for _any_ object.
+null, while objects get set to null all the time -- that's their default value! When 
+you look at a String -- it's either a String or a null and that goes for _any_ object.
 
 This is not a solved problem, the majority of Java programmers probably use null 
-types as a control flow strategy. This fundamentally __breaks__ the
+values as a control flow strategy. This fundamentally __breaks__ the
 entire type system. Being able to set an object to, what should be, a completely 
 different type is madness.
 
