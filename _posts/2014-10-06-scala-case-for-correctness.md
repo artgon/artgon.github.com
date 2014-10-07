@@ -106,7 +106,7 @@ there is broken, especially my own. This is not because of bad
 programmers, it's because _writing concurrent code is hard!_
 
 "Easy concurrency" sounds like the famous last words of a cocky 
-brogrammer. What I mean by the word "easy" is that the it's easy
+brogrammer. What I mean by the word "easy" is that it's easy
 to reason about. The concurrency method encouraged in Scala is the actor 
 model, via Akka.[^2] The biggest advantage of the actor model is not one of 
 performance or clustering -- it's correctness. Having a guarantee
