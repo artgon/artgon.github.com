@@ -5,21 +5,21 @@ meta-description: Choosing Scala should not just be for brevity or speed -- it's
 published: false
 ---
 
-Recently being thrown back into the world of Java development has made
-me evaluate my original conviction in Scala. Having worked exclusively
-with Scala for the past two years, I'm acutely aware of all it's various 
-pain points -- and it has many. I've also enjoyed some of Java's advantages
-over Scala, like faster compilation times and mature tooling.
+It's only a matter of time before managers are faced with eager Java developers 
+trying to push a new language on them. It's a hard sell. Java has mature tooling,
+tons of documentation, countless stackoverflow articles and lots of senior
+developers available to fill vacancies. Combine that with your team's expertise in
+Java and the rampup cost for a project that was probably supposed to be done yesterday.
 
-That being said, I still think Scala is the better option and the key reason
-why is correctness. 
+Needless to say, the benefits should be substantial enough that the investment is
+worth it. The typical selling point these developers are going to throw out are
+about the concise syntax or the functional programming paradigms but for me the biggest 
+benefit with Scala is __correctness__. 
 
 <!--more-->
 
-The main selling points for Scala have generally been the 
-syntactic sugar and the functional programming paradigms, but correctness is 
-so much more important. The key features being: immutability by default, 
-easy concurrency and no null values.[^1]
+The key Scala features that ensure correctness are immutability by default, easy 
+concurrency and no null values.[^1]
 
 
 #### Immutability by Default
@@ -27,9 +27,9 @@ easy concurrency and no null values.[^1]
 
 _Labelling all variables as final_
 
-In Java, in order to make sure that methods do not mutate anything, you need
-to mark all parameters as final, and then inner variable all need to be marked
-as final in order to ensure immutability.
+In Java, in order to make sure that methods do not mutate given parameters, they need
+to be marked final. The inner variables also need to be marked as final to ensure their 
+immutability.
 
 {% highlight java %}
 public void doStuff(final Integer thing1, final String thing2, final List<Integer> thing3)
@@ -52,11 +52,15 @@ def doStuff(thing1: Int, thing2: String, thing3: List[Int]) {
 }
 {% endhighlight %}
 
+Scala goes a step further, by defaulting to immutable collections, immutable class
+members and even immutable singletons. As a language, it has been designed with this
+theme in mind.
+
 _Primitive blocks are not expressions_
 
-The main issue with primitive blocks is that they're executed imperatively without a 
-return value. You cannot set the result of a try/catch to an immutable value 
-unless you wrap it in a separate function.
+Primitive blocks in Java are executed imperatively without a return value. This is
+problematic when trying to set the result to a value. For example: You cannot set 
+the result of a try/catch to an immutable value.
 
 {% highlight java %}
 Integer parsedResults = 0;
@@ -89,7 +93,7 @@ catch {
 {% endhighlight %}
 
 Having the result be an expression simplifies the code and allows you to set the result to an immutable 
-variable. Other primitive blocks like _for_ and _while_ work much the same way in Scala.
+variable. Other primitive blocks like _for_, _if_ and _while_ work much the same way in Scala.
 
 #### Easy Concurrency
 
@@ -132,15 +136,23 @@ counter ! "echo" // 3
 Simple, intuitive, correct. Although this is a trivial example, you'll notice
 that you don't have to worry about the shared state of the _count_ variable. You
 don't have to make it atomic or make the addition to it synchronized. You have a 
-guarantee that only one thread will execute that code at a time.
+guarantee that only one thread will execute that code at a time. 
+
+This doesn't mean that designing concurrent programs is necessarily easier. You still
+have to figure out contention, backpressure, responsiveness and so on. However, when 
+looking at any given actor, you know exactly what going on.
 
 #### No Null Values
 
-The most common exception in Java application is the NullPointerException. There
-is a weird separation of objects and primitives. Primitives cannot be set to
-null, while objects get set to null all the time. I would argue that the majority
-of Java programmers still use null types as a return knowingly, as just another
-strategy for control flow.
+The most common exception in Java application is the NullPointerException. Java has 
+always had issues separating objects and primitives. Primitives cannot be set to
+null, while objects get set to null all the time. When you look at a String type 
+it's either a String or a null and that goes for _any_ object.
+
+This is not a solved problem, the majority of Java programmers probably use null 
+types as a control flow strategy. This fundamentally __breaks__ the
+entire type system. Being able to set an object to, what should be, a completely 
+different type is madness.
 
 JDK 8 has alleviated some of this pain with an _Optional<T\>_ class that allows you
 to wrap null types and unwrap them safely. Unfortunately, the _Optional<T\>_ object can 
@@ -167,6 +179,6 @@ for and it's hard to argue against tools that make it easier. Despite the stabil
 Java, I would still choose Scala.
 
 
-[^1]: When calling Java code you may get null values but you cannot set a value to null in Scala code. 
+[^1]: When calling Java code you may get null values but you cannot set a value to null in Scala code unless it has the _Null_ type. 
 [^2]: Akka is also available for Java but it's not part of idiomatic Java, whereas it's the standard approach in Scala.
 [^3]: In reality you should never use the _Null_ type. It only exists for Java interop compatibility. Ideally you should always use the _Option[T]_ class.
