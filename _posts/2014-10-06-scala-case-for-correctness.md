@@ -2,25 +2,24 @@
 layout: post
 title: "Scala: the Case for Correctness"
 meta-description: Choosing Scala should not just be for brevity or speed -- it's for correctness
-published: false
 ---
 
 It's only a matter of time before Java shop managers are faced with eager developers 
 trying to push a new language on them. It's a hard sell. Java has mature tooling,
-tons of documentation, countless stackoverflow articles and lots of senior
+tons of documentation, countless stackoverflow articles, and lots of senior
 developers available to fill vacancies. Combine that with your team's expertise in
 Java and the rampup cost for new language, on a project that was supposed to be 
 done yesterday.
 
 Needless to say, the benefits should be substantial enough that the investment is
 worth it. The typical selling points developers are going to throw out are the concise 
-syntax or the functional programming paradigms but for me the biggest benefit with 
+syntax or the functional programming but for me the biggest benefit with 
 Scala is __correctness__. 
 
 <!--more-->
 
 The key Scala features that ensure correctness are immutability by default, easy 
-concurrency and no null values.[^1]
+concurrency, and no null values.[^1]
 
 
 #### Immutability by Default
@@ -55,7 +54,7 @@ def doStuff(thing1: Int, thing2: String, thing3: List[Int]) {
 {% endhighlight %}
 
 Scala goes a step further, by defaulting to immutable collections, immutable class
-members and even immutable singletons. As a language, it has been designed with this
+members, and even immutable singletons. As a language, it has been designed with this
 theme in mind.
 
 _Primitive blocks are not expressions_
