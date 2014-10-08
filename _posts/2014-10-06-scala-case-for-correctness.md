@@ -18,8 +18,9 @@ Scala is __correctness__.
 
 <!--more-->
 
-The key Scala features that ensure correctness are immutability by default, easy 
-concurrency, and no null values.[^1]
+When I say correctness, I mean the ability to easily and consistently write code that 
+works as inteded (not the academic definition of correctness). The key Scala features 
+that increase correctness are immutability by default, easy concurrency, and no null values.[^1]
 
 
 #### Immutability by Default
@@ -176,8 +177,10 @@ of the standard library supports returning optional values, _None_ or _Some[T]_,
 #### Correctness Matters
 
 Increasing correctness increases productivity. Producing code that works is something we all strive
-for and it's hard to argue against tools that make it easier. Despite the stability and maturity of 
-Java, I would still choose Scala.
+for and it's hard to argue against tools that make it easier. There will always be skepticism about
+moving off of Java, it is after all the language the JVM is designed for. However, when
+you have to hack around daily programming tasks for correctness, it may be worth re-evaluating your
+technology stack. Despite the stability and maturity of Java, I would still choose Scala.
 
 
 [^1]: When calling Java code you may get null values but you cannot set a value to null in Scala code unless it has the _Null_ type. 
