@@ -146,9 +146,10 @@ looking at any given actor, you know exactly what's going on.
 
 #### No Null Values
 
-The most common exception in Java application is the NullPointerException. Java has 
-always had issues separating objects and primitives. Primitives cannot be set to
-null, while objects get set to null all the time -- that's their default value! When 
+The most common exception in Java applications is the _NullPointerException_ (otherwise 
+know as the [billion dollar mistake](http://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare)).
+Java has always had issues separating objects and primitives. Primitives cannot be set to
+null, while objects get set to null all the time -- that's their default value. When 
 you look at a String -- it's either a String or a null and that goes for _any_ object.
 
 This is not a solved problem, the majority of Java programmers probably use null 
@@ -161,18 +162,38 @@ to wrap null types and unwrap them safely. Unfortunately, the _Optional<T\>_ obj
 be set to null! This means that you may have to null check the object that's supposed
 to save you from getting null errors.
 
-This is of course part of the bigger problem that Scala intrinsically solves. _Null_ is 
-a type in Scala just like any other.[^3] You cannot set an object to _Null_ unless that is 
-its type. If you try to set an _Int_ to _Null_, you'll get a compile error.
+There are two ways Scala mitigates the null reference issue. Firstly, you can't set
+a Value Type (i.e. _AnyVal_) to null. For example: if you try to set an _Int_ to _null_, you'll 
+get a compile error.
 
-{% highlight console %}
+{% highlight scala %}
 scala> val x: Int = null
 <console>:7: error: an expression of type Null is ineligible for implicit conversion
        val x: Int = null
 {% endhighlight %}
 
-Furthermore, because the _Option[T]_ type has been built into Scala from the beginning, every part
-of the standard library supports returning optional values, _None_ or _Some[T]_, when required.
+Sadly, this is not true for Reference Types (i.e. _AnyRef_). Scala allows you to set references 
+to null. I assume it only exists for Java inter-op and for giving _var_ declarations an initial
+value. It is generally recommended to avoid using _var_, but if you must, you can set the type 
+to _Option[T]_ and the initial value to _None_.
+
+The second way Scala mitigates null reference errors is simple -- none of the standard APIs use 
+the _Null_ trait. Since the _Option[T]_ type has been built into Scala from the beginning, every 
+part of the standard library supports returning optional values, _None_ or _Some[T]_, when 
+required. For example when accessing a map:
+
+{% highlight scala %}
+scala> Map("a" -> 1, "b" -> 2, "c" -> 3).get("a")
+res2: Option[Int] = Some(1)
+
+scala> Map("a" -> 1, "b" -> 2, "c" -> 3).get("asdf")
+res3: Option[Int] = None
+{% endhighlight %}
+
+Notice the type of the _get_ method: it returns an _Option[Int]_, which clearly signifies that
+the return may or may not have a value. The equivalent method in Java, either returns the value
+or _null_ if the value does not exist. This does not force the developer to handle the optional
+type and may result in sporadic failures, which are difficult to test and debug.
 
 #### Correctness Matters
 
@@ -185,4 +206,3 @@ technology stack. Despite the stability and maturity of Java, I would still choo
 
 [^1]: When calling Java code you may get null values but you cannot set a value to null in Scala code unless it has the _Null_ type. 
 [^2]: Akka is also available for Java but it's not part of idiomatic Java, whereas it's the standard approach in Scala.
-[^3]: In reality you should never use the _Null_ type. It only exists for Java interop compatibility. Ideally you should always use the _Option[T]_ class.
