@@ -197,6 +197,46 @@ type and may result in sporadic failures, which are difficult to test and debug.
 
 #### Correctness Matters
 
+The examples above may seem like unlikely selling points for switching to a new language. The reason
+I picked them is because they are daily tasks that are fundamental for writing software that works.
+Yes, you can write more concise code; yes, you can pattern match; yes, you can use mixins. There are
+hundreds of other reasons that Scala makes a great language.[^3] When a language can offer me constructs
+to write more correct code, I'll always be willing to deal with the learning curve. 
+
+Joshua Bloch and Venkat Sumbramaniam are big names in the Java community and they've
+devoted books to working around problems like these:
+
+Choose immutability:
+
+>The functional approach may appear unnatural if you’re not familiar with it, but it enables immutability, 
+>which has many advantages. __Immutable objects are simple. An immutable object can be in exactly one state, 
+>the state in which it was created__. If you make sure that all constructors establish class invariants, 
+>then it is guaranteed that these invariants will remain true for all time, with no further effort on your 
+>part or on the part of the programmer who uses the class.
+
+- Joshua Bloch, Effective Java (2008)
+
+Choose actors:
+
+>Shared mutability — the root of concurrency problems — is where multiple threads can modify a variable. Isolated 
+>mutability — a nice compromise that removes most concurrency concerns — is where only one thread (or actor) can 
+>access a mutable variable, ever.
+
+- Venkat Subramaniam, Programming Concurrency on the JVM (2011)
+
+Avoid null values:
+
+>If an API allows nulls to exist longer, it isn't doing you any favor. It's just pushing the exception off 
+>to the next API that you pass the thing to. Often, it's better to just enforce the rules uniformly. Some 
+>people will complain, especially because the convention isn't completely universal. There are APIs that 
+>do let you pass around nulls as an abbreviation for zero length arrays or for an empty string, etc. And those 
+>APIs are in a sense bad citizens, because once you mix them with APIs that don't, you're in trouble.
+>This is one of these few places where I feel like some sort of puritan. __But I have found that it's easier 
+>to write robust correct systems__ if you are maybe a little less forgiving on input.
+
+- Joshua Bloch, [In Conversation with Bill Venners](http://www.artima.com/intv/blochP.html) (2002)
+
+
 Increasing correctness increases productivity. Producing code that works is something we all strive
 for and it's hard to argue against tools that make it easier. There will always be skepticism about
 moving off of Java, it is after all the language the JVM is designed for. However, when
@@ -206,3 +246,4 @@ technology stack. Despite the stability and maturity of Java, I would still choo
 
 [^1]: When calling Java code you may get null values but you cannot set a value to null in Scala code unless it has the _Null_ type. 
 [^2]: Akka is also available for Java but it's not part of idiomatic Java, whereas it's the standard approach in Scala.
+[^3]: There are certainly some pain points as well.
