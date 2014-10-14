@@ -199,11 +199,11 @@ type and may result in sporadic failures, which are difficult to test and debug.
 
 The examples above may seem like unlikely selling points for switching to a new language. The reason
 I picked them is because they are daily tasks that are fundamental for writing software that works.
-Yes, you can write more concise code; yes, you can pattern match; yes, you can use mixins. There are
-hundreds of other reasons that Scala makes a great language.[^3] When a language can offer me constructs
-to write more correct code, I'll always be willing to deal with the learning curve. 
+Yes, you can write more concise code; yes, you have a more advanced type system; yes, you can pattern 
+match. There are hundreds of other reasons that Scala makes a great language.[^3] When a language 
+can offer me constructs to write more correct code, I'll always be willing to deal with the learning curve. 
 
-Joshua Bloch and Venkat Sumbramaniam are big names in the Java community and they've
+Joshua Bloch and Venkat Subramaniam are big names in the Java community and they've
 devoted books to working around problems like these:
 
 Choose immutability:
