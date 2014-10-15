@@ -19,7 +19,7 @@ Scala is __correctness__.
 <!--more-->
 
 When I say correctness, I mean the ability to easily and consistently write code that 
-works as inteded (not the academic definition of correctness). The key Scala features 
+works as intended (not the academic definition of correctness). The key Scala features 
 that increase correctness are immutability by default, easy concurrency, and no null values.[^1]
 
 
