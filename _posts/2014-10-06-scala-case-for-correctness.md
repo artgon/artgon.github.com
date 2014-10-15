@@ -8,7 +8,7 @@ It's only a matter of time before Java shop managers are faced with eager develo
 trying to push a new language on them. It's a hard sell. Java has mature tooling,
 tons of documentation, countless stackoverflow articles, and lots of senior
 developers available to fill vacancies. Combine that with your team's expertise in
-Java and the rampup cost for new language, on a project that was supposed to be 
+Java and the rampup cost for a new language, on a project that was supposed to be 
 done yesterday.
 
 Needless to say, the benefits should be substantial enough that the investment is
