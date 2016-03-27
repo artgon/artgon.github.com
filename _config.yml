@@ -1,5 +1,5 @@
 port: 3000
-highlighter: pygments
+highlighter: rouge
 safe: false
 lsi: false
 url: http://arthur.gonigberg.com
