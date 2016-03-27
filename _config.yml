@@ -7,6 +7,6 @@ permalink: /:year/:month/:day/:title
 excerpt_separator: <!--more-->
 include: ['.well-known']
 
-markdown: rdiscount
+markdown: kramdown
 rdiscount:
   extensions: ['footnotes']
