@@ -3,7 +3,7 @@ highlighter: rouge
 safe: false
 lsi: false
 url: http://arthur.gonigberg.com
-permalink: /:year/:month/:day/:title
+permalink: /:year/:month/:day/:title/
 excerpt_separator: <!--more-->
 include: ['.well-known']
 
