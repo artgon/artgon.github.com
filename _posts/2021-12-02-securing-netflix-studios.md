@@ -9,4 +9,13 @@ full-fledged studio. Being a tech company, we wanted to leverage that expertise 
 
 As you can imagine, one of the biggest concerns for these applications is security because of all the sensitive information related to pre-release content. So how do we get these applications on the internet as fast as possible and as securely as possible? 
 
-Well, we already have a [secure gateway](https://github.com/Netflix/zuul) for streaming customers, so why don't we also leverage it for Studio applications? That's exactly what we did, and it has streamlined deployment while also increasing security. It has been an unmitigated success story. Check out the blog post [here](https://netflixtechblog.com/the-show-must-go-on-securing-netflix-studios-at-scale-19b801c86479). 
+Well, we already have a [secure gateway](https://github.com/Netflix/zuul) for streaming customers, so why don't we also leverage it for Studio applications? That's exactly what we did, and it has streamlined deployment while also increasing security. It has been an unmitigated success story. 
+
+<!--more-->
+
+We named it Wall-E (from the project code name of "API Wall"), and it
+fronts all of our studio and corporate applications.
+
+<img src="https://miro.medium.com/max/2000/0*2ffjsP2qIwI3vOHV" alt="Wall-E" width="800"/>
+
+For the full deep-dive, check out the blog post [here](https://netflixtechblog.com/the-show-must-go-on-securing-netflix-studios-at-scale-19b801c86479). 
