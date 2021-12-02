@@ -14,6 +14,8 @@ You can read the full blog post [here](https://netflixtechblog.com/keeping-netfl
 
 ![Load shedding](https://miro.medium.com/max/1400/0*zhw-qRWIQAfnSiBU)
 
+<!--more-->
+
 There are some exciting aspects to what we built, particularly the cubic progression of priority throttling. 
 
 > ![Cubic](https://miro.medium.com/max/1294/0*zmyyiRWI49KCFoEP)
